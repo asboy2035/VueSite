@@ -9,14 +9,34 @@
     position: relative;
     width: calc(100% - 3rem);
     align-items: flex-start;
-    border-radius: 2rem;
     padding: 1.5rem;
+
+    border-radius: 2rem;
     background: var(--foreground-color);
+    backdrop-filter: blur(1rem);
+    animation: growIn 0.3s ease;
     z-index: 1;
   }
+  
+  @keyframes growIn {
+    0% {
+      scale: 0.9;
+    }
+
+    50% {
+      scale: 1.1;
+      transform: none;
+    }
+
+    100% {
+      scale: 1;
+    }
+  }
+  
   a .card {
     width: calc(100% - 1.5rem);
   }
+  
   .card::before {
     content: "";
     position: absolute;
