@@ -10,6 +10,17 @@
   import MainLinks from "@/components/links/MainLinks.vue";
   import Description from "@/components/Description.vue";
   import VStack from "@/components/VStack.vue";
+
+  import { useHead } from '@vueuse/head'
+
+  useHead({
+    title: "ash's Links",
+    meta: [
+      { name: "description", content: "My socials and more :)" },
+      { property: "og:title", content: "ash's Links" },
+      { property: "og:description", content: "My socials and more :)" }
+    ]
+  })
 </script>
 
 <template>
