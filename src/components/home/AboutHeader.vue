@@ -5,7 +5,7 @@
 <template>
   <card class="stackModeOnly">
     <div class="hStack">
-      <img src="../../images/avatar.jpg" alt="ash's Avatar" class="bigAvatar">
+      <img src="@/images/avatar.jpg" alt="ash's Avatar" class="bigAvatar">
       <div class="vStack">
         <div class="hStack">
           <h1>ash</h1>
