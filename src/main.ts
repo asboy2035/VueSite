@@ -1,5 +1,12 @@
 import { createApp } from 'vue'
-import './style.css'
 import App from './App.vue'
+import { createHead } from '@vueuse/head'
+import { router } from './router'
+import './style.css'
 
-createApp(App).mount('#app')
+const app = createApp(App)
+const head = createHead()
+
+app.use(router)
+app.use(head)
+app.mount('#app')

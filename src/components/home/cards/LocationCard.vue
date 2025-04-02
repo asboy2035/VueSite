@@ -5,6 +5,6 @@
 <template>
   <card class="spaced autospace">
     <h2>Bordeaux, France</h2>
-    <img src="@/images/Bordeaux.webp" alt="Place de la Bourse, Bordeaux, France">
+    <img src="../../../images/Bordeaux.webp" alt="Place de la Bourse, Bordeaux, France">
   </card>
 </template>

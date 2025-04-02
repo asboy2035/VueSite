@@ -5,14 +5,17 @@
 </template>
 
 <style scoped>
+  a > .interior {
+    width: 100%;
+  }
+
   .interior {
     background: var(--foreground-color);
     border-radius: 0.75rem;
     padding: 0.75rem;
   }
 
-  /* Links/Langs */
-  .card.vStack.interior.centered > svg {
+  svg {
     width: 3rem;
     height: 3rem;
   }

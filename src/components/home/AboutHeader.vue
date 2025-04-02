@@ -1,17 +1,19 @@
 <script setup lang="ts">
   import Card from "@/components/Card.vue";
+  import VStack from "@/components/VStack.vue";
+  import HStack from "@/components/HStack.vue";
 </script>
 
 <template>
   <card class="stackModeOnly">
-    <div class="hStack">
+    <h-stack>
       <img src="@/images/avatar.jpg" alt="ash's Avatar" class="bigAvatar">
-      <div class="vStack">
-        <div class="hStack">
+      <v-stack>
+        <h-stack>
           <h1>ash</h1>
           <h1 class="light">asboy2035</h1>
-        </div>
-      </div>
-    </div>
+        </h-stack>
+      </v-stack>
+    </h-stack>
   </card>
 </template>
