@@ -7,7 +7,7 @@
   <div class="sidebarView sidebarModeOnly">
     <card>
       <v-stack>
-        <img src="@/images/avatar.jpg" alt="ash's Avatar" class="bigAvatar">
+        <img src="/public/images/avatar.jpg" alt="ash's Avatar" class="bigAvatar">
         <h1>ash</h1>
         <h2 class="light">asboy2035</h2>
       </v-stack>

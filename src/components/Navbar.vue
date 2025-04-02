@@ -11,7 +11,7 @@
 <!--    Optional Profile-->
     <h-stack v-if="hideProfile !== true" class="profile transparent">
       <router-link to="/">
-        <img class="avatar" src="@/images/avatar.jpg" alt="ash's Avatar">
+        <img class="avatar" src="/public/images/avatar.jpg" alt="ash's Avatar">
       </router-link>
       <h1>ash</h1>
     </h-stack>

@@ -48,12 +48,33 @@
 
     opacity: 0.4;
     background: radial-gradient(circle at top left, var(--swirly-01), var(--swirly-02), var(--swirly-03), var(--swirly-04));
+    background-size: 400% 400%;
     z-index: -1;
     filter: blur(1rem);
-    transition: 0.2s ease;
+    transition: opacity 0.4s ease;
   }
+
   .card:hover::before {
     opacity: 0.9;
+    animation: swirly 10s ease-in-out infinite;
+  }
+
+  @keyframes swirly {
+    0% {
+      background-position: 0% 0%;
+    }
+    25% {
+      background-position: 100% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    75% {
+      background-position: 0% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
   }
 
   @media (max-width: 35rem) {

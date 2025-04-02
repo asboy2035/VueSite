@@ -9,6 +9,17 @@
   import BottomFooter from "@/components/BottomFooter.vue";
   import NoCss from "@/components/NoCss.vue";
   import BottomMask from "@/components/BottomMask.vue";
+
+  import { useHead } from "@vueuse/head";
+
+  useHead({
+    title: 'ash (asboy2035)',
+    meta: [
+      { name: 'description', content: 'My (new) site :)' },
+      { property: 'og:title', content: "ash's Site" },
+      { property: 'og:description', content: 'My (new) site :)' }
+    ]
+  })
 </script>
 
 <template>

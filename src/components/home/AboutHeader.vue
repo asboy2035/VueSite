@@ -7,7 +7,7 @@
 <template>
   <card class="stackModeOnly">
     <h-stack>
-      <img src="@/images/avatar.jpg" alt="ash's Avatar" class="bigAvatar">
+      <img src="/public/images/avatar.jpg" alt="ash's Avatar" class="bigAvatar">
       <v-stack>
         <h-stack>
           <h1>ash</h1>
