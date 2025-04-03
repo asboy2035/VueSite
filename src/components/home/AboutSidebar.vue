@@ -2,8 +2,6 @@
 import { ref, onMounted } from 'vue';
 import Card from "@/components/Card.vue";
 import VStack from "@/components/VStack.vue";
-import Spacer from "@/components/Spacer.vue";
-import Divider from "@/components/Divider.vue";
 import HStack from "@/components/HStack.vue";
 
 const currentTime = ref('');
