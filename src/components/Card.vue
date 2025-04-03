@@ -17,6 +17,11 @@
     animation: growIn 0.3s ease;
     z-index: 1;
   }
+
+  ::v-deep(img) {
+    max-width: 100%;
+    border-radius: 0.75rem;
+  }
   
   @keyframes growIn {
     0% {

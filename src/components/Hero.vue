@@ -35,12 +35,15 @@
     margin: 1.5rem;
     height: fit-content;
   }
-  .heroText h1 {
+
+  ::v-deep(h1) {
     font-family: 'Instrument Serif', serif;
     font-style: italic;
+    color: white;
     font-size: 5rem;
   }
-  .heroText h1, .heroText h2 {
+
+  ::v-deep(h1), ::v-deep(h2), ::v-deep(p) {
     color: white;
   }
 
