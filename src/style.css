@@ -41,6 +41,7 @@ body {
 .contentView {
   display: flex;
   flex-direction: column;
+  width: calc(100vw - 2rem);
   max-width: 55rem;
   min-height: 100vh;
   padding: 3rem 1rem;
@@ -120,7 +121,6 @@ svg {
   color: var(--text-color);
 }
 
-/* Images */
 .card img {
   max-width: 100%;
   border-radius: 0.75rem;
@@ -203,65 +203,52 @@ button:disabled {
   align-items: center;
 }
 
-.hero {
-  height: 45vh;
-  justify-content: center;
-}
-
 .bigAvatar {
   width: 4rem !important;
   height: 4rem !important;
 }
 
-/* Hero */
-.hero-v2 {
-  display: flex;
+@media (max-width: 35rem) {
+  .card iframe {
+    border-radius: 1rem;
+  }
+
+  .contentView, .navigationView {
+    width: calc(100vw - 1rem);
+    padding: 0.5rem;
+  }
+}
+
+.updatedBadge {
   position: relative;
-  align-items: flex-start;
-  justify-content: flex-end;
-  min-height: fit-content;
-  height: 75vh;
-  max-height: 80vw;
-  width: 100%;
+  border-radius: 10rem;
+  border: rgba(76, 0, 130, 0.4) 0.1rem solid;
+  background: var(--foreground-color);
+  padding: 0.75rem;
+  animation: pulse 3s infinite ease-in-out;
+  z-index: 2;
 }
-
-.heroText {
-  display: flex;
-  align-items: flex-start;
-  margin: 1.5rem;
-  height: fit-content;
-}
-.heroText h1 {
-  font-family: 'Instrument Serif', serif;
-  font-style: italic;
-  font-size: 5rem;
-}
-.heroText h1, .heroText h2 {
-  color: white;
-}
-
-.hero-v2 img {
+.updatedBadge::after {
   position: absolute;
+  content: "";
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-
-  object-fit: cover;
-  border-radius: 1.5rem;
-  width: 100%;
-  height: 100%;
-  mask: linear-gradient(to top, transparent, black, black);
+  filter: blur(2rem);
+  background: indigo;
   z-index: -1;
 }
 
-@media (max-width: 35rem) {
-  .hero {
-    height: fit-content;
-    align-items: flex-start;
+@keyframes pulse {
+  0% {
+    opacity: 1;
   }
-
-  .hero-v2 {
-    max-height: 75vh;
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
   }
 }
+
