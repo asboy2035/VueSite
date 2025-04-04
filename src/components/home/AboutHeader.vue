@@ -1,13 +1,13 @@
 <script setup lang="ts">
-  import Card from "@/components/Card.vue";
-  import VStack from "@/components/VStack.vue";
-  import HStack from "@/components/HStack.vue";
+  import Card from "@/components/layout/Card.vue";
+  import VStack from "@/components/layout/VStack.vue";
+  import HStack from "@/components/layout/HStack.vue";
 </script>
 
 <template>
   <card class="stackModeOnly">
     <h-stack>
-      <img src="/public/images/avatar.jpg" alt="ash's Avatar" class="bigAvatar">
+      <img src="/images/avatar.jpg" alt="ash's Avatar" class="bigAvatar">
       <v-stack>
         <h-stack>
           <h1>ash</h1>

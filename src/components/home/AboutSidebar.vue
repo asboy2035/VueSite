@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
-import Card from "@/components/Card.vue";
-import VStack from "@/components/VStack.vue";
-import HStack from "@/components/HStack.vue";
+import Card from "@/components/layout/Card.vue";
+import VStack from "@/components/layout/VStack.vue";
+import HStack from "@/components/layout/HStack.vue";
 
 const currentTime = ref('');
 
@@ -28,7 +28,7 @@ onMounted(() => {
   <div class="sidebarView sidebarModeOnly spaced">
     <card>
       <v-stack>
-        <img src="/public/images/avatar.jpg" alt="ash's Avatar" class="bigAvatar">
+        <img src="/images/avatar.jpg" alt="ash's Avatar" class="bigAvatar">
         <h1>ash</h1>
         <h2 class="light" style="margin-top: 0">asboy2035</h2>
       </v-stack>

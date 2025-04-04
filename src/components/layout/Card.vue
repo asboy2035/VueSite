@@ -52,6 +52,7 @@
     padding: 0.5rem;
 
     opacity: 0.4;
+    border-radius: 2rem;
     background: radial-gradient(circle at top left, var(--swirly-01), var(--swirly-02), var(--swirly-03), var(--swirly-04));
     background-size: 400% 400%;
     z-index: -1;
@@ -87,6 +88,9 @@
       padding: 1rem;
       border-radius: 1.75rem;
       width: calc(100% - 2rem);
+    }
+    .card::before {
+      border-radius: 1.75rem;
     }
   }
 </style>

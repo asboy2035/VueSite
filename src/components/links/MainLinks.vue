@@ -1,8 +1,8 @@
 <script setup lang="ts">
-  import Spacer from "@/components/Spacer.vue";
-  import Card from "@/components/Card.vue";
-  import InteriorItem from "@/components/InteriorItem.vue";
-  import Grid from "@/components/Grid.vue";
+  import Spacer from "@/components/utils/Spacer.vue";
+  import Card from "@/components/layout/Card.vue";
+  import InteriorItem from "@/components/layout/InteriorItem.vue";
+  import Grid from "@/components/layout/Grid.vue";
 </script>
 
 <template>

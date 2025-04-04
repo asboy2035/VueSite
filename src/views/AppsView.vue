@@ -1,15 +1,15 @@
 <script setup lang="ts">
-  import NoCss from "@/components/NoCss.vue";
-  import BottomMask from "@/components/BottomMask.vue";
-  import Hero from "@/components/Hero.vue";
-  import Spacer from "@/components/Spacer.vue";
-  import VStack from "@/components/VStack.vue";
-  import Navbar from "@/components/Navbar.vue";
-  import Grid from "@/components/Grid.vue";
-  import Card from "@/components/Card.vue";
+  import NoCss from "@/components/premade/NoCss.vue";
+  import BottomMask from "@/components/premade/BottomMask.vue";
+  import Hero from "@/components/utils/Hero.vue";
+  import Spacer from "@/components/utils/Spacer.vue";
+  import VStack from "@/components/layout/VStack.vue";
+  import Navbar from "@/components/premade/Navbar.vue";
+  import Grid from "@/components/layout/Grid.vue";
+  import Card from "@/components/layout/Card.vue";
 
   import { useHead } from '@vueuse/head'
-  import BottomFooter from "@/components/BottomFooter.vue";
+  import BottomFooter from "@/components/premade/BottomFooter.vue";
 
   useHead({
     title: "ash's Apps",
@@ -75,7 +75,7 @@
           name: "Stand",
           description: "A Mac app for standing desks.",
           image: "/images/icons/Stand-Icon.png",
-          link: "./stand.html",
+          link: "/apps/stand",
         },
         {
           name: "BigTime",
