@@ -214,6 +214,10 @@ button:disabled {
   }
 }
 
+.scrollable {
+  overflow: scroll;
+}
+
 @keyframes pulse {
   0% {
     opacity: 1;
