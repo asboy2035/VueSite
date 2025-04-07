@@ -9,6 +9,7 @@
   import BottomMask from "@/components/premade/BottomMask.vue";
   import BottomFooter from "@/components/premade/BottomFooter.vue";
   import Navbar from "@/components/premade/Navbar.vue";
+  import NoCss from "@/components/premade/NoCss.vue";
 
   interface CursorAsset {
     type: string
@@ -42,6 +43,7 @@
 </script>
 
 <template>
+  <no-css />
   <bottom-mask />
 
   <div class="contentView">

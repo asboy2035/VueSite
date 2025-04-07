@@ -5,12 +5,14 @@ import LinksView from "@/views/LinksView.vue";
 import AppsView from "../views/AppsView.vue";
 import AppPage from "../views/AppPage.vue";
 import GoodiesView from "@/views/GoodiesView.vue";
+import PlaylistPage from "@/views/PlaylistPage.vue";
 
 const routes = [
   { path: '/', component: HomeView },
   { path: '/links', component: LinksView },
   { path: '/apps', component: AppsView },
   { path: '/apps/:slug', component: AppPage },
+  { path: '/playlists/:slug', component: PlaylistPage },
   { path: '/goodies', component: GoodiesView },
 ]
 
