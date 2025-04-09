@@ -158,6 +158,16 @@ button:disabled {
   cursor: not-allowed;
 }
 
+input, textarea {
+  margin: 0.5rem;
+  padding: 0.25rem;
+  border-radius:  0.25rem;
+  font-family: comfortaa, system-ui, sans-serif;
+  background: var(--foreground-color);
+  border: none;
+  color: var(--text-color);
+}
+
 .fullWidth {
   width: 100%;
 }
