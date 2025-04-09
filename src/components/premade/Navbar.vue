@@ -86,8 +86,12 @@ const creators: Item[] = [
 
       <header>
         <h-stack v-if="hideProfile !== true" class="profile transparent">
-          <router-link to="/">
-            <img class="avatar" src="/images/avatar.jpg" alt="ash's Avatar">
+          <router-link to="/" id="homeButtonContainer">
+            <img class="avatar" src="/images/avatar.jpg" alt="ash's Avatar (Go Home)" id="avatarButton">
+
+            <button class="navigationButton" aria-label="Go Home" id="homeButton">
+              <svg width="32" height="32" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="m12.707 2.293l9 9c.63.63.184 1.707-.707 1.707h-1v6a3 3 0 0 1-3 3h-1v-7a3 3 0 0 0-2.824-2.995L13 12h-2a3 3 0 0 0-3 3v7H7a3 3 0 0 1-3-3v-6H3c-.89 0-1.337-1.077-.707-1.707l9-9a1 1 0 0 1 1.414 0M13 14a1 1 0 0 1 1 1v7h-4v-7a1 1 0 0 1 .883-.993L11 14z"/></svg>
+            </button>
           </router-link>
           <h1>ash</h1>
         </h-stack>
@@ -171,5 +175,25 @@ const creators: Item[] = [
     z-index: -1;
     filter: blur(1rem);
     transition: opacity 0.4s ease;
+  }
+
+  #homeButtonContainer > #homeButton, #homeButtonContainer:hover > #avatarButton {
+    display: none;
+  }
+  #homeButtonContainer:hover > #homeButton {
+    display: flex;
+  }
+  #homeButton, #avatarButton {
+    animation: blurIn 0.3s ease forwards;
+  }
+  @keyframes blurIn {
+    0% {
+      opacity: 0.5;
+      filter: blur(0.5rem);
+    }
+    100% {
+      opacity: 1;
+      filter: none;
+    }
   }
 </style>
