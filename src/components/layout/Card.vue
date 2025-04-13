@@ -14,7 +14,6 @@
     border-radius: 2rem;
     background: var(--foreground-color);
     backdrop-filter: blur(1rem);
-    animation: growIn 0.3s ease;
     z-index: 1;
   }
 

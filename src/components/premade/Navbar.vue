@@ -51,7 +51,7 @@ const creators: Item[] = [
 </script>
 
 <template>
-  <v-stack style="z-index: 3">
+  <v-stack class="navBar">
     <slot />
 
     <fullscreen-cover v-if="showSwitcher" />
@@ -121,12 +121,12 @@ const creators: Item[] = [
 </template>
 
 <style scoped>
-  .vStack {
+  .navBar {
     position: sticky;
     flex-wrap: wrap;
     bottom: 1rem;
     max-width: calc(100vw - 2rem);
-    z-index: 2;
+    z-index: 3;
     align-items: center;
   }
 
@@ -138,15 +138,16 @@ const creators: Item[] = [
     background: var(--foreground-color);
     box-shadow: 0.5rem 0.5rem 3rem rgba(28, 28, 28, 0.2);
     padding: 0.5rem;
-    border-radius: 2rem;
+    border-radius: 1.75rem;
     z-index: 3;
     backdrop-filter: blur(2rem);
+    transition: width 0.2s ease;
   }
 
   .avatar, .navigationButton {
     width: 3rem;
     height: 3rem;
-    border-radius: 50%;
+    border-radius: 1.25rem;
     transition: 0.2s ease-in-out;
   }
   .navigationButton {
