@@ -34,11 +34,11 @@
   }
 
   .transitionElement {
-    transform: translateX(-100%);
-    transition: transform 0.4s ease;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
   }
 
   .transitionElement.active {
-    transform: translateX(0%);
+    transform: translateY(0%);
   }
 </style>
