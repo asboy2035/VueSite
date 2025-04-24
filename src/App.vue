@@ -9,15 +9,15 @@
     <spacer />
 
     <h-stack class="autospace fullWidth">
-      <a href="https://asboy2035.com">
-        <button>
-          Got it, take me there!
-        </button>
-      </a>
-
       <button @click="showDomainTip = false">
         Later
       </button>
+
+      <a :href="redirectLink">
+        <button>
+          Take me there!
+        </button>
+      </a>
     </h-stack>
   </modal>
 </template>
@@ -32,6 +32,7 @@
   import HStack from "@/components/layout/HStack.vue";
 
   const showDomainTip = ref(false)
+  const redirectLink = `https://asboy2035.com${location.pathname}${location.search}${location.hash}`;
 
   const cover = ref()
   const transitionable = ref()
