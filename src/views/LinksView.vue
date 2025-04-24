@@ -7,18 +7,20 @@
   import Spacer from "@/components/utils/Spacer.vue";
   import BottomFooter from "@/components/premade/BottomFooter.vue";
   import MoreLinks from "@/components/links/MoreLinks.vue";
-  import MainLinks from "@/components/links/MainLinks.vue";
+  import SocialLinks from "@/components/links/SocialLinks.vue";
   import Description from "@/components/premade/Description.vue";
   import VStack from "@/components/layout/VStack.vue";
 
   import { useHead } from '@vueuse/head'
+  import SupportLinks from "@/components/links/SupportLinks.vue";
+  import Hero from "@/components/utils/Hero.vue";
 
   useHead({
     title: "ash's Links",
     meta: [
-      { name: "description", content: "My socials and more :)" },
+      { name: "description", content: "My socials, contacts, and more :)" },
       { property: "og:title", content: "ash's Links" },
-      { property: "og:description", content: "My socials and more :)" }
+      { property: "og:description", content: "My socials, contacts, and more :)" }
     ]
   })
 </script>
@@ -28,6 +30,11 @@
   <bottom-mask />
 
   <div class="contentView">
+    <hero image="/images/Links.jpg">
+      <h1>Links</h1>
+      <p>My socials, contacts, and more.</p>
+    </hero>
+
     <!-- About -->
     <grid class="spaced">
       <card class="autospace">
@@ -40,7 +47,8 @@
       </card>
     </grid>
 
-    <main-links />
+    <social-links />
+    <support-links />
     <more-links />
     <bottom-footer />
 

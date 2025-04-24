@@ -1,14 +1,19 @@
 <template>
- <div class="fullScreenCover" />
+ <div class="fullScreenCover">
+   <slot />
+ </div>
 </template>
 
 <style scoped>
   .fullScreenCover {
     position: fixed;
+    display: flex;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
+    align-items: center;
+    justify-content: center;
     z-index: 2;
 
     opacity: 0;
