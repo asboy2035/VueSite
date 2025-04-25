@@ -11,6 +11,7 @@
   import { useHead } from '@vueuse/head'
   import BottomFooter from "@/components/premade/BottomFooter.vue";
   import AppLink from "@/components/apps/AppLink.vue";
+  import DynamicImage from "@/components/utils/DynamicImage.vue";
 
   useHead({
     title: "ash's Apps",
@@ -113,11 +114,15 @@
         <h2>{{ category.name }}</h2>
         <grid class="app-grid">
           <div v-for="app in category.apps" :key="app.name" class="app-card-v2">
-            <img :src="app.image" :alt="app.name + ' Logo'" />
+            <div class="app-image">
+              <dynamic-image class="app-image" :src="app.image" :alt="app.name + ' Logo'" />
+            </div>
+
             <div class="app-details">
               <h3>{{ app.name }}</h3>
               <p class="light">{{ app.description }}</p>
             </div>
+
             <div class="app-downloads">
               <app-link :to="app.link" :disabled="app.disabled ?? false" />
               <a v-if="app.github" :href="app.github">
@@ -158,7 +163,7 @@
     background: var(--foreground-color);
     border-radius: 1rem;
   }
-  .app-card-v2 > img {
+  .app-image {
     width: 4rem;
     height: 4rem;
     border-radius: 1rem;

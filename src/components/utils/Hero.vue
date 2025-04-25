@@ -1,5 +1,8 @@
 <script>
+  import DynamicImage from "@/components/utils/DynamicImage.vue";
+
   export default {
+    components: {DynamicImage},
     props: {
       image: String,
       imageAlt: String ?? "Image"
@@ -9,7 +12,7 @@
 
 <template>
   <div class="hero-v2">
-    <img :src="image" :alt="imageAlt">
+    <dynamic-image class="heroResizableImage" :src="image" :alt="imageAlt" />
 
     <div class="heroText spaced">
       <slot />
@@ -47,7 +50,7 @@
     color: white;
   }
 
-  .hero-v2 img {
+  .hero-v2 .heroResizableImage {
     position: absolute;
     top: 0;
     bottom: 0;

@@ -5,6 +5,7 @@ import VStack from '@/components/layout/VStack.vue'
 import Card from '@/components/layout/Card.vue'
 import InteriorItem from '@/components/layout/InteriorItem.vue'
 import FullscreenCover from "@/components/premade/FullscreenCover.vue";
+import DynamicImage from "@/components/utils/DynamicImage.vue";
 
 const showSwitcher = ref(false)
 
@@ -60,7 +61,7 @@ const creators: Item[] = [
       <h-stack class="tight">
         <interior-item v-for="app in apps" :key="app.name">
           <a :href="app.link" target="_blank">
-            <img :src="app.icon" :alt="app.name + ' icon'" style="width: 2rem">
+            <dynamic-image class="launcherImage" :src="app.icon" :alt="app.name + ' icon'" radius="0.35rem" />
             <p>{{ app.name }}</p>
           </a>
         </interior-item>
@@ -71,7 +72,7 @@ const creators: Item[] = [
       <h-stack class="tight">
         <interior-item v-for="creator in creators" :key="creator.name">
           <a :href="creator.link">
-            <img :src="creator.icon" :alt="creator.name + ' icon'" style="width: 2rem">
+            <dynamic-image class="launcherImage" :src="creator.icon" :alt="creator.name + ' icon'" radius="0.35rem" />
             <p>{{ creator.name }}</p>
           </a>
         </interior-item>
@@ -224,5 +225,10 @@ const creators: Item[] = [
     100% {
       transform: scale(1);
     }
+  }
+
+  .launcherImage {
+    width: 2rem;
+    height: 2rem;
   }
 </style>
