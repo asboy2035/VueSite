@@ -1,5 +1,6 @@
 <script setup lang="ts">
   import { ref, onMounted } from 'vue'
+  import { useHead } from '@vueuse/head'
   import Card from "@/components/layout/Card.vue";
   import Spacer from "@/components/utils/Spacer.vue";
   import VStack from "@/components/layout/VStack.vue";
@@ -38,6 +39,15 @@
           { type: "Camera", path: "/cursors/bibataModern/Camera-v2.png" }
         ]
       }
+    ]
+  })
+
+  useHead({
+    title: "ash's Goodies",
+    meta: [
+      { name: "description", content: "Misc stuff from me." },
+      { property: "og:title", content: "ash's Goodies" },
+      { property: "og:description", content: "Misc stuff from me." }
     ]
   })
 </script>
