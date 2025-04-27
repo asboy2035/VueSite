@@ -1,9 +1,20 @@
 <script setup lang="ts">
+  import { ref } from "vue"
   import Card from "@/components/layout/Card.vue"
+
+  const hidden = ref(false)
+
+  function handleAnimationEnd() {
+    hidden.value = true
+  }
 </script>
 
 <template>
-  <div class="notificationContainer">
+  <div
+    class="notificationContainer"
+    :class="{ hidden: hidden }"
+    @animationend="handleAnimationEnd"
+  >
     <card class="bannerNotification">
       <slot />
     </card>

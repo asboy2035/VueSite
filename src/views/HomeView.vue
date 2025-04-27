@@ -1,6 +1,6 @@
 <script setup>
   import AboutSidebar from '@/components/home/AboutSidebar.vue'
-  import Navbar from '@/components/premade/Navbar.vue'
+  import Navbar from '@/components/premade/navbar/Navbar.vue'
   import AboutHeader from "@/components/home/AboutHeader.vue";
   import LocationCard from "@/components/home/cards/LocationCard.vue";
   import AboutCard from "@/components/home/cards/AboutCard.vue";

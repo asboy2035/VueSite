@@ -16,7 +16,7 @@
   import AppStoreIcon from '@/components/apps/AppStoreIcon.vue'
   import LinkIcon from '@/components/apps/LinkIcon.vue'
   import HStack from "@/components/layout/HStack.vue";
-  import Navbar from "@/components/premade/Navbar.vue";
+  import Navbar from "@/components/premade/navbar/Navbar.vue";
 
   const route = useRoute()
   const slug = route.params.slug as string

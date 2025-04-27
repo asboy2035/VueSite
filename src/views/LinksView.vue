@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import NoCss from "@/components/premade/NoCss.vue";
   import BottomMask from "@/components/premade/BottomMask.vue";
-  import Navbar from "@/components/premade/Navbar.vue";
+  import Navbar from "@/components/premade/navbar/Navbar.vue";
   import Grid from "@/components/layout/Grid.vue";
   import Card from "@/components/layout/Card.vue";
   import Spacer from "@/components/utils/Spacer.vue";

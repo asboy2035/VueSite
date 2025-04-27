@@ -33,7 +33,7 @@ import html2canvas from 'html2canvas'
 import VStack from "@/components/layout/VStack.vue";
 import NoCss from "@/components/premade/NoCss.vue";
 import BottomMask from "@/components/premade/BottomMask.vue";
-import Navbar from "@/components/premade/Navbar.vue";
+import Navbar from "@/components/premade/navbar/Navbar.vue";
 import Grid from "@/components/layout/Grid.vue";
 import Hero from "@/components/utils/Hero.vue";
 import { useHead } from '@vueuse/head'

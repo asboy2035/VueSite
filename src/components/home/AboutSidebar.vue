@@ -1,34 +1,36 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
-import Card from "@/components/layout/Card.vue";
-import VStack from "@/components/layout/VStack.vue";
-import HStack from "@/components/layout/HStack.vue";
+  import { ref, onMounted } from 'vue';
+  import Card from "@/components/layout/Card.vue";
+  import VStack from "@/components/layout/VStack.vue";
+  import HStack from "@/components/layout/HStack.vue";
+  import SitePicker from "@/components/premade/navbar/SitePicker.vue";
+  import DynamicImage from "@/components/utils/DynamicImage.vue";
 
-const currentTime = ref('');
+  const currentTime = ref('');
 
-const updateTime = () => {
-  const now = new Date();
-  const options: Intl.DateTimeFormatOptions = {
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit',
-    timeZone: 'Europe/Paris',
-    hour12: false,
+  const updateTime = () => {
+    const now = new Date();
+    const options: Intl.DateTimeFormatOptions = {
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      timeZone: 'Europe/Paris',
+      hour12: false,
+    };
+    currentTime.value = now.toLocaleTimeString('en-GB', options);
   };
-  currentTime.value = now.toLocaleTimeString('en-GB', options);
-};
 
-onMounted(() => {
-  updateTime(); // Initialize immediately
-  setInterval(updateTime, 1000); // Update every second
-});
+  onMounted(() => {
+    updateTime(); // Initialize immediately
+    setInterval(updateTime, 1000); // Update every second
+  });
 </script>
 
 <template>
   <div class="sidebarView sidebarModeOnly spaced">
     <card>
       <v-stack>
-        <img src="/images/avatar.jpg" alt="ash's Avatar" class="bigAvatar">
+        <dynamic-image src="/images/avatar.jpg" alt="ash's Avatar" radius="2rem" class="bigAvatar" />
         <h1>ash</h1>
         <h2 class="light" style="margin-top: 0">asboy2035</h2>
       </v-stack>
@@ -50,6 +52,8 @@ onMounted(() => {
         </a>
       </h-stack>
     </card>
+
+    <site-picker class="fullWidth" />
   </div>
 </template>
 

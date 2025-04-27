@@ -4,7 +4,7 @@
   import Hero from "@/components/utils/Hero.vue";
   import Spacer from "@/components/utils/Spacer.vue";
   import VStack from "@/components/layout/VStack.vue";
-  import Navbar from "@/components/premade/Navbar.vue";
+  import Navbar from "@/components/premade/navbar/Navbar.vue";
   import Grid from "@/components/layout/Grid.vue";
   import Card from "@/components/layout/Card.vue";
 
