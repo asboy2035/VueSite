@@ -3,6 +3,7 @@
   --background-color: white;
   --foreground-color: rgba(226, 226, 226, 0.35);
   --text-color: black;
+  --accent-color: rgb(159, 117, 232);
 
   --swirly-01: white;
   --swirly-02: rgb(242, 178, 227);
@@ -15,6 +16,7 @@
     --background-color: black;
     --foreground-color: rgba(45, 45, 45, 0.35);
     --text-color: rgb(240, 240, 240);
+    --accent-color: rgb(90, 20, 209);
 
     --swirly-01: black;
     --swirly-02: rgb(20, 0, 26);

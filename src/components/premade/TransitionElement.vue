@@ -1,4 +1,5 @@
 <template>
+  <div class="progressBar" :class="{ active: isActive }" />
   <div class="transitionElement" :class="{ active: isActive }" />
 </template>
 
@@ -40,5 +41,33 @@
 
   .transitionElement.active {
     transform: translateY(0%);
+  }
+
+  .progressBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0.5rem;
+    z-index: 6;
+
+    transform: translateX(-100%);
+    background: var(--accent-color);
+  }
+
+  .progressBar.active {
+    animation: progressActive 1s ease;
+  }
+
+  @keyframes progressActive {
+    0% {
+      transform: translateX(-100%);
+    }
+    50% {
+      transform: none;
+    }
+    100% {
+      transform: translateY(-100%);
+    }
   }
 </style>
