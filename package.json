@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@iconify/vue": "^5.0.0",
     "@vueuse/head": "^2.0.0",
     "html2canvas": "^1.4.1",
     "marked": "^15.0.7",

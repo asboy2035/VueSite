@@ -20,7 +20,8 @@
     transition: 0.2s ease-in-out;
     padding: 0;
   }
-  .navigationButton > svg {
-    height: 2rem;
+  .navigationButton > ::v-deep(svg) {
+    height: 1.25rem;
+    width: 1.25rem;
   }
 </style>

@@ -152,7 +152,7 @@ button svg {
 button.transparent {
   padding: 0;
 }
-button.transparent > svg {
+button > ::v-deep(svg) {
   width: 1.5rem;
 }
 button:disabled {

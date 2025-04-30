@@ -1,16 +1,17 @@
 <script setup lang="ts">
   import { ref, onMounted } from 'vue'
   import { useHead } from '@vueuse/head'
-  import Card from "@/components/layout/Card.vue";
-  import Spacer from "@/components/utils/Spacer.vue";
-  import VStack from "@/components/layout/VStack.vue";
-  import Grid from "@/components/layout/Grid.vue";
-  import Hero from "@/components/utils/Hero.vue";
-  import HStack from "@/components/layout/HStack.vue";
-  import BottomMask from "@/components/premade/BottomMask.vue";
-  import BottomFooter from "@/components/premade/BottomFooter.vue";
-  import Navbar from "@/components/premade/navbar/Navbar.vue";
-  import NoCss from "@/components/premade/NoCss.vue";
+  import Card from "@/components/layout/Card.vue"
+  import Spacer from "@/components/utils/Spacer.vue"
+  import VStack from "@/components/layout/VStack.vue"
+  import Grid from "@/components/layout/Grid.vue"
+  import Hero from "@/components/utils/Hero.vue"
+  import HStack from "@/components/layout/HStack.vue"
+  import BottomMask from "@/components/premade/BottomMask.vue"
+  import BottomFooter from "@/components/premade/BottomFooter.vue"
+  import Navbar from "@/components/premade/navbar/Navbar.vue"
+  import NoCss from "@/components/premade/NoCss.vue"
+  import {Icon} from "@iconify/vue"
 
   interface CursorAsset {
     type: string
@@ -89,7 +90,7 @@
             </h-stack>
             <a :href="cursor.downloadURL">
               <button>
-                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M3 15V9a6 6 0 0 1 6-6h6a6 6 0 0 1 6 6v6a6 6 0 0 1-6 6H9a6 6 0 0 1-6-6"/><path d="M15 3s-4.5 0-4.5 9H13c0 9 2 9 2 9"/><path d="M16.5 14.5s-1.5 2-4.5 2s-4.5-2-4.5-2M7 9v2m10-2v2"/></g></svg>
+                <Icon icon="iconoir:finder" width="24" height="24" />
                 Download
               </button>
             </a>
