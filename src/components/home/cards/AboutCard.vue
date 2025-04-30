@@ -17,7 +17,7 @@
         <Icon icon="solar:arrow-right-line-duotone" width="24" height="24" />
         <router-link to="/links">
           <button>
-            <Icon icon="solar:link-minimalistic-2-line-duotone" />
+            <Icon icon="solar:link-minimalistic-2-line-duotone" width="24" height="24" />
             Links
           </button>
         </router-link>
