@@ -110,7 +110,7 @@
       <header :class="{ desktopLinks: hideProfile }">
         <h-stack v-if="hideProfile !== true" class="profile transparent">
           <navigation-button link="/" id="homeButtonContainer">
-            <img class="avatar" src="/images/avatar.jpg" alt="ash's Avatar (Go Home)" id="avatarButton">
+            <img class="avatar" src="/images/avatar.png" alt="ash's Avatar (Go Home)" id="avatarButton">
 
             <Icon icon="solar:home-angle-bold-duotone" aria-label="Go Home" id="homeButton" style="scale: 1.25" width="24" height="24" />
           </navigation-button>

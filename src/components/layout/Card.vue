@@ -60,7 +60,7 @@
   }
 
   .card:hover::before {
-    opacity: 0.9;
+    opacity: 0.7;
     animation: swirly 10s ease-in-out infinite;
   }
 

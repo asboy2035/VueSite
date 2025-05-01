@@ -29,7 +29,7 @@
   <card class="stackModeOnly">
     <h-stack>
       <h-stack>
-        <dynamic-image src="/images/avatar.jpg" alt="ash's Avatar" radius="2rem" class="bigAvatar" />
+        <dynamic-image src="/images/avatar.png" alt="ash's Avatar" radius="2rem" class="bigAvatar" />
         <v-stack>
           <h-stack>
             <h1>ash</h1>

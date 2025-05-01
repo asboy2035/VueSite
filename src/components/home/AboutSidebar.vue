@@ -30,7 +30,7 @@
   <div class="sidebarView sidebarModeOnly spaced">
     <card>
       <v-stack>
-        <dynamic-image src="/images/avatar.jpg" alt="ash's Avatar" radius="2rem" class="bigAvatar" />
+        <dynamic-image src="/images/avatar.png" alt="ash's Avatar" radius="2rem" class="bigAvatar" />
         <h1>ash</h1>
         <h2 class="light" style="margin-top: 0">asboy2035</h2>
       </v-stack>
