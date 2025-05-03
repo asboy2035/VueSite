@@ -7,6 +7,7 @@ import AppPage from "../views/AppPage.vue";
 import GoodiesView from "@/views/GoodiesView.vue";
 import PlaylistPage from "@/views/PlaylistPage.vue";
 import CharCardMaker from "@/views/CharCardMaker.vue";
+import RickrollView from "@/views/RickrollView.vue";
 
 const routes = [
   { path: '/', component: HomeView },
@@ -16,6 +17,7 @@ const routes = [
   { path: '/playlists/:slug', component: PlaylistPage },
   { path: '/goodies', component: GoodiesView },
   { path: '/create/charcard', component: CharCardMaker  },
+  { path: '/tests/audio', component: RickrollView }
 ]
 
 export const router = createRouter({
