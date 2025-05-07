@@ -5,10 +5,8 @@
   --text-color: black;
   --accent-color: rgb(159, 117, 232);
 
-  --swirly-01: white;
+  --swirly-01: #b291ec;
   --swirly-02: rgb(242, 178, 227);
-  --swirly-03: rgb(204, 163, 255);
-  --swirly-04: rgb(172, 189, 255);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,10 +16,8 @@
     --text-color: rgb(240, 240, 240);
     --accent-color: rgb(90, 20, 209);
 
-    --swirly-01: black;
-    --swirly-02: rgb(20, 0, 26);
-    --swirly-03: rgb(21, 0, 46);
-    --swirly-04: rgb(0, 7, 36);
+    --swirly-01: #3b11b8;
+    --swirly-02: rgb(140, 21, 177);
   }
 }
 
@@ -82,16 +78,24 @@ body {
   }
 
   .stackModeOnly {
-    display: none;
+    display: none !important;
   }
+}
+
+@font-face {
+  font-family: 'DT Getai Grotesk Display Black';
+  src: url('@/fonts/DTGetaiGroteskDisplay-Black.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
 }
 
 h1, h2, h3, h4, h5, h6, p {
   margin: 0.25rem;
 }
 h1, h2, h3 {
-  margin-top: 0.75rem;
-  font-family: 'JetBrains Mono', monospace;
+  margin-top: 0.5rem;
+  font-family: "DT Getai Grotesk Display Black", monospace;
+  font-weight: bold;
 }
 .profile h1 {
   margin: 0;

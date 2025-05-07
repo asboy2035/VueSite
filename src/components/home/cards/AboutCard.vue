@@ -8,7 +8,7 @@
 </script>
 
 <template>
-  <card class="autospace">
+  <card>
     <v-stack class="edgeToEdge">
       <description />
       <spacer />

@@ -1,5 +1,5 @@
 <template>
-  <card style="width: 350px; height: fit-content; padding: 0; border-radius: 1.5rem">
+  <card style="width: 350px; height: fit-content; padding: 0; border-radius: 1.5rem" >
     <div class="bannerContainer">
       <img :src="data.banner" alt="Banner">
     </div>
@@ -67,15 +67,22 @@ const props = defineProps(['data'])
     height: 8rem;
     width: 100%;
     background-size: cover;
-    border-radius: 1.5rem;
-    mask: linear-gradient(to bottom, black, transparent);
+    border-radius: 2rem;
   }
 
-  .interior {
-    border-radius: 0.75rem
+  ::v-deep(.interior) {
+    --interior-radius: 1.25rem
   }
 
-  .card::before {
+  ::v-deep(.card) {
+    padding: 0;
+  }
+
+  ::v-deep(.card::before) {
     display: none !important;
+  }
+
+  ::v-deep(.card::after), ::v-deep(.interior::after) {
+    box-shadow: none !important;
   }
 </style>

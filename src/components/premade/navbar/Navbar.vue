@@ -188,7 +188,7 @@
     padding: 0.5rem;
 
     border-radius: 50%;
-    background: var(--swirly-03);
+    background: var(--swirly-01);
     z-index: -1;
     filter: blur(1rem);
     transition: opacity 0.4s ease;

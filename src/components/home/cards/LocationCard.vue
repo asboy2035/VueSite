@@ -4,8 +4,8 @@
 </script>
 
 <template>
-  <card class="spaced autospace">
-    <h2>Bordeaux, France</h2>
+  <card class="autospace">
+    <h2>Bordeaux, FR</h2>
     <dynamic-image src="/images/Bordeaux.webp" alt="Place de la Bourse, Bordeaux, France" />
   </card>
 </template>

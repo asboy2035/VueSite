@@ -27,10 +27,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 6;
     top: 1rem;
     left: 0;
     width: 100vw;
+    z-index: 6;
     height: fit-content;
 
     background: transparent;
