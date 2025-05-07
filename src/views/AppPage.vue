@@ -86,6 +86,8 @@
             {{ link.title }}
           </button>
         </a>
+
+        <p class="brewCmd" v-if="app.brewCmd">{{ app.brewCmd }}</p>
       </h-stack>
     </card>
 
@@ -104,3 +106,13 @@
     </navbar>
   </div>
 </template>
+
+<style scoped>
+  .brewCmd {
+    font-family: "JetBrains Mono", monospace;
+    opacity: 0.7;
+    user-select: all;
+    -webkit-user-select: all;
+    scale: 0.9;
+  }
+</style>

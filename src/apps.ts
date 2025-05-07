@@ -15,6 +15,7 @@ export type AppPageMeta = {
   longDescriptionMarkdown: string
   updatedBadge?: string
   appLinks?: AppLink[]
+  brewCmd?: string
 }
 
 export const apps: AppPageMeta[] = [
@@ -39,6 +40,7 @@ export const apps: AppPageMeta[] = [
         url: "https://github.com/asboy2035/Stand/releases/latest",
         type: "github"
       }
-    ]
+    ],
+    brewCmd: "brew install asboy2035/apps/stand"
   }
 ];
