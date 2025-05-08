@@ -42,6 +42,13 @@
     box-shadow: 0 1rem 0.75rem var(--text-color);
   }
 
+  .interior:active {
+    transform: translateY(-0.15rem);
+  }
+  .interior:active::after {
+    box-shadow: 0 0.35rem 0.55rem var(--text-color);
+  }
+
   ::v-deep(svg) {
     width: 3rem;
     height: 3rem;
