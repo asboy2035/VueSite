@@ -49,7 +49,7 @@
 
           <a href="https://alt.asboy2035.com/">
             <button :disabled="!isMain">
-              <Icon icon="solar:planet-bold-duotone" width="24" height="24" />
+              <Icon icon="solar:planet-line-duotone" width="24" height="24" />
               Alternate
             </button>
           </a>
