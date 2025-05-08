@@ -16,6 +16,7 @@
     background: var(--foreground-color);
     border-radius: var(--interior-radius);
     padding: 0.75rem;
+    transition: 0.2s ease;
   }
 
   .interior::after {
@@ -31,6 +32,14 @@
     border-radius: var(--interior-radius);
     opacity: 0.05;
     pointer-events: none;
+    transition: 0.1s ease;
+  }
+
+  .interior:hover {
+    transform: translateY(-0.5rem);
+  }
+  .interior:hover::after {
+    box-shadow: 0 1rem 0.75rem var(--text-color);
   }
 
   ::v-deep(svg) {
