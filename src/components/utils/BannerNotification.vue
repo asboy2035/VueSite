@@ -38,8 +38,9 @@
   }
 
   .bannerNotification {
-    padding: 0.75rem 1rem;
+    padding: 0.75rem;
     width: fit-content;
+    max-width: calc(100vw - 2rem);
     transform: translateY(calc(-100% - 1rem));
     animation: notification 3s ease forwards;
     animation-delay: 1s;

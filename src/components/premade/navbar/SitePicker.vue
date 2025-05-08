@@ -4,11 +4,18 @@
   import SitePick from "@/components/premade/navbar/SitePick.vue"
   import HStack from "@/components/layout/HStack.vue"
   import {Icon} from "@iconify/vue"
+  import { ref, onMounted } from "vue"
+
+  const isMain = ref(true)
 
   function isMainHost(): boolean {
     const host = window.location.href
-    return !host.includes("alt.asboy2035.com");
+    return !host.includes("alt.asboy2035.com")
   }
+
+  onMounted(() => {
+    isMain.value = isMainHost()
+  })
 </script>
 
 <template>
@@ -34,14 +41,14 @@
         <h3>Hosts</h3>
         <h-stack>
           <a href="https://asboy2035.com">
-            <button :disabled="isMainHost">
+            <button :disabled="isMain">
               <Icon icon="solar:planet-bold-duotone" width="24" height="24" />
               Main
             </button>
           </a>
 
           <a href="https://alt.asboy2035.com/">
-            <button :disabled="!isMainHost">
+            <button :disabled="!isMain">
               <Icon icon="solar:planet-bold-duotone" width="24" height="24" />
               Alternate
             </button>

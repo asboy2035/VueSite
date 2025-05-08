@@ -44,7 +44,7 @@
   }
 
   .card:hover::before {
-    opacity: 0.5;
+    opacity: 0.4;
     animation: swirly 10s ease-in-out infinite;
   }
 

@@ -19,7 +19,6 @@
   }
 
   .interior::after {
-    --shadow-location: ;
     content: "";
     position: absolute;
     top: 0;
@@ -28,7 +27,7 @@
     left: 0;
 
     border: 0.1rem solid var(--text-color);
-    box-shadow: var(--shadow-location) 0 0.5rem 0.5rem var(--text-color);
+    box-shadow: 0 0.5rem 0.5rem var(--text-color);
     border-radius: var(--interior-radius);
     opacity: 0.05;
     pointer-events: none;
@@ -43,12 +42,6 @@
     .interior {
       --interior-radius: 1rem;
       padding: 0.75rem;
-    }
-  }
-
-  @media (prefers-color-scheme: dark) {
-    .interior::after{
-      --shadow-location: inset;
     }
   }
 </style>

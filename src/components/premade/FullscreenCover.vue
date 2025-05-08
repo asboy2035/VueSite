@@ -1,7 +1,9 @@
 <template>
- <div class="fullScreenCover">
-   <slot />
- </div>
+  <div class="fullScreenCover">
+    <div class="fullScreenCoverContent">
+      <slot />
+    </div>
+  </div>
 </template>
 
 <style scoped>
@@ -17,10 +19,15 @@
     z-index: 5;
 
     opacity: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: var(--foreground-color);
     backdrop-filter: blur(2rem);
     border-radius: 0;
     animation: opacity 0.2s ease forwards;
+  }
+
+  .fullScreenCoverContent {
+    flex-direction: column;
+    width: calc(100% - 1rem);
   }
 
   @keyframes opacity {
