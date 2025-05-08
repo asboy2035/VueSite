@@ -7,8 +7,6 @@
   import Grid from "@/components/layout/Grid.vue";
   import LangsCard from "@/components/home/cards/LangsCard.vue";
   import BottomFooter from "@/components/premade/BottomFooter.vue";
-  import NoCss from "@/components/premade/NoCss.vue";
-  import BottomMask from "@/components/premade/BottomMask.vue";
 
   import { useHead } from "@vueuse/head";
 
@@ -23,9 +21,6 @@
 </script>
 
 <template>
-  <no-css />
-  <bottom-mask />
-
   <div class="navigationView">
     <about-sidebar />
     <div class="contentView">

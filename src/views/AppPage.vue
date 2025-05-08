@@ -5,9 +5,7 @@
   import { ref, onMounted, computed } from 'vue'
   import { useHead } from '@vueuse/head'
   import Hero from "@/components/utils/Hero.vue";
-  import BottomMask from "@/components/premade/BottomMask.vue";
   import BottomFooter from "@/components/premade/BottomFooter.vue";
-  import NoCss from "@/components/premade/NoCss.vue";
   import { marked } from 'marked';
   import Card from "@/components/layout/Card.vue";
   import UpdatedBadge from "@/components/apps/UpdatedBadge.vue";
@@ -63,8 +61,6 @@
 </script>
 
 <template>
-  <no-css />
-  <bottom-mask />
   <div v-if="app" class="contentView">
     <hero :image="app.headerImagePath" :image-alt="`${app.title} screenshot`">
       <updated-badge v-if="app.updatedBadge">{{ app.updatedBadge }}</updated-badge>

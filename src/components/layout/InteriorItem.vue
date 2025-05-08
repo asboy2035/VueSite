@@ -11,7 +11,7 @@
 
   .interior {
     position: relative;
-    --interior-radius: 0.75rem;
+    --interior-radius: 1.25rem;
 
     background: var(--foreground-color);
     border-radius: var(--interior-radius);

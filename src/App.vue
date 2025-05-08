@@ -1,8 +1,11 @@
 <template>
   <transitionable ref="transitionable">
+    <h1 class="hidden">Your CSS is disabled!</h1>
+    <page-mask />
     <router-view />
   </transitionable>
   <transition-element ref="cover" />
+
   <banner-notification>
     <h-stack>
       <v-stack>
@@ -18,6 +21,7 @@
       </a>
     </h-stack>
   </banner-notification>
+
   <modal v-if="showDomainTip">
     <h1>You're on the old domain!</h1>
     <p>Access this site at asboy2035.com for a cleaner link!</p>
@@ -48,6 +52,7 @@
   import BannerNotification from "@/components/utils/BannerNotification.vue";
   import VStack from "@/components/layout/VStack.vue";
   import {Icon} from "@iconify/vue"
+  import PageMask from "@/components/premade/PageMask.vue";
 
   const showDomainTip = ref(false)
   const redirectLink = `https://asboy2035.com${location.pathname}${location.search}${location.hash}`;

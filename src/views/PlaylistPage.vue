@@ -13,8 +13,6 @@
   import VStack from "@/components/layout/VStack.vue";
   import Spacer from "@/components/utils/Spacer.vue";
   import Grid from "@/components/layout/Grid.vue";
-  import NoCss from "@/components/premade/NoCss.vue";
-  import BottomMask from "@/components/premade/BottomMask.vue";
   import Navbar from "@/components/premade/navbar/Navbar.vue";
   import Hero from "@/components/utils/Hero.vue";
 
@@ -83,9 +81,6 @@
 </script>
 
 <template>
-  <no-css />
-  <bottom-mask />
-
   <div v-if="playlist" class="contentView">
     <hero image="/images/Playlists.jpg">
       <h1>{{ playlist.title }}</h1>

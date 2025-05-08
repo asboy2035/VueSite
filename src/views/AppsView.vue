@@ -1,6 +1,4 @@
 <script setup lang="ts">
-  import NoCss from "@/components/premade/NoCss.vue";
-  import BottomMask from "@/components/premade/BottomMask.vue";
   import Hero from "@/components/utils/Hero.vue";
   import Spacer from "@/components/utils/Spacer.vue";
   import VStack from "@/components/layout/VStack.vue";
@@ -93,9 +91,6 @@
 </script>
 
 <template>
-  <no-css />
-  <bottom-mask />
-
   <div class="contentView">
     <hero image="/images/Apps.png" image-alt="Apps Header Image">
       <h1>My Apps</h1>

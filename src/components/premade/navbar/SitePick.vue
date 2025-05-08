@@ -1,15 +1,17 @@
 <script setup lang="ts">
   import HStack from "@/components/layout/HStack.vue"
+  import {Icon} from "@iconify/vue"
 
   defineProps<{
     title: string
+    icon: string
   }>()
 </script>
 
 <template>
   <h-stack class="sitePicker">
     <div class="icon">
-      <slot />
+      <Icon :icon="icon" />
     </div>
 
     <h3>{{ title }}</h3>
@@ -18,9 +20,9 @@
 
 <style scoped>
   .icon {
-    width: 3rem;
-    height: 3rem;
-    padding: 0.25rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.1rem;
     background: var(--foreground-color);
     align-items: center;
     justify-content: center;
@@ -28,8 +30,8 @@
   }
 
   .icon > ::v-deep(svg) {
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 
   .sitePicker {

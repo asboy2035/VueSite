@@ -71,29 +71,33 @@
   <v-stack class="navBar">
     <slot />
 
-    <fullscreen-cover v-if="showSwitcher" />
-    <card v-if="showSwitcher" style="z-index: 3">
-      <h2>Apps</h2>
-      <h-stack class="tight">
-        <interior-item v-for="app in apps" :key="app.name">
-          <a :href="app.link" target="_blank">
-            <dynamic-image class="launcherImage" :src="app.icon" :alt="app.name + ' icon'" radius="0.35rem" />
-            <p>{{ app.name }}</p>
-          </a>
-        </interior-item>
-      </h-stack>
-    </card>
-    <card v-if="showSwitcher" style="z-index: 3">
-      <h2>Create...</h2>
-      <h-stack class="tight">
-        <interior-item v-for="creator in creators" :key="creator.name">
-          <a :href="creator.link">
-            <dynamic-image class="launcherImage" :src="creator.icon" :alt="creator.name + ' icon'" radius="0.35rem" />
-            <p>{{ creator.name }}</p>
-          </a>
-        </interior-item>
-      </h-stack>
-    </card>
+    <fullscreen-cover v-if="showSwitcher">
+      <v-stack>
+        <card class="quickContainer">
+          <h2>Apps</h2>
+          <h-stack class="tight">
+            <interior-item v-for="app in apps" :key="app.name">
+              <a :href="app.link" target="_blank">
+                <dynamic-image class="launcherImage" :src="app.icon" :alt="app.name + ' icon'" radius="0.35rem" />
+                <p>{{ app.name }}</p>
+              </a>
+            </interior-item>
+          </h-stack>
+        </card>
+
+        <card class="quickContainer">
+          <h2>Create...</h2>
+          <h-stack class="tight">
+            <interior-item v-for="creator in creators" :key="creator.name">
+              <a :href="creator.link">
+                <dynamic-image class="launcherImage" :src="creator.icon" :alt="creator.name + ' icon'" radius="0.35rem" />
+                <p>{{ creator.name }}</p>
+              </a>
+            </interior-item>
+          </h-stack>
+        </card>
+      </v-stack>
+    </fullscreen-cover>
 
     <header id="mobileNav" :class="{ hidden: !showMobileNav }">
       <navigation-links />
@@ -149,7 +153,7 @@
     flex-wrap: wrap;
     bottom: 1rem;
     max-width: calc(100vw - 2rem);
-    z-index: 3;
+    z-index: 20;
     align-items: center;
   }
 
@@ -162,9 +166,13 @@
     box-shadow: 0.5rem 0.5rem 3rem rgba(28, 28, 28, 0.2);
     padding: 0.5rem;
     border-radius: 1.75rem;
-    z-index: 3;
+    z-index: 20;
     backdrop-filter: blur(2rem);
     transition: width 0.2s ease;
+  }
+
+  .profile h1 {
+    margin: 0;
   }
 
   .avatar {
@@ -176,7 +184,7 @@
   .createBtn {
     height: fit-content;
     border-radius: 2rem;
-    z-index: 3;
+    z-index: 20;
   }
   .createBtn::before {
     content: "";

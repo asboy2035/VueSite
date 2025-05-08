@@ -14,6 +14,6 @@
     background: linear-gradient(to top, var(--background-color), transparent);
     opacity: 0.75;
     border-radius: 0;
-    z-index: 2;
+    z-index: 10;
   }
 </style>

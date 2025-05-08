@@ -7,10 +7,8 @@
   import Grid from "@/components/layout/Grid.vue"
   import Hero from "@/components/utils/Hero.vue"
   import HStack from "@/components/layout/HStack.vue"
-  import BottomMask from "@/components/premade/BottomMask.vue"
   import BottomFooter from "@/components/premade/BottomFooter.vue"
   import Navbar from "@/components/premade/navbar/Navbar.vue"
-  import NoCss from "@/components/premade/NoCss.vue"
   import {Icon} from "@iconify/vue"
 
   interface CursorAsset {
@@ -54,9 +52,6 @@
 </script>
 
 <template>
-  <no-css />
-  <bottom-mask />
-
   <div class="contentView">
     <hero image="/images/Goodies.jpg">
       <h1>Goodies</h1>

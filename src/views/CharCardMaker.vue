@@ -1,7 +1,4 @@
 <template>
-  <no-css />
-  <bottom-mask />
-
   <div class="contentView">
     <hero image="/images/Creator.jpg">
       <h1>Character Card</h1>
@@ -31,8 +28,6 @@ import CustomizerPanel from '@/components/charCards/CustomizerPanel.vue'
 import CardPreview from '@/components/charCards/CardPreview.vue'
 import html2canvas from 'html2canvas'
 import VStack from "@/components/layout/VStack.vue";
-import NoCss from "@/components/premade/NoCss.vue";
-import BottomMask from "@/components/premade/BottomMask.vue";
 import Navbar from "@/components/premade/navbar/Navbar.vue";
 import Grid from "@/components/layout/Grid.vue";
 import Hero from "@/components/utils/Hero.vue";
