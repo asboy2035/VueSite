@@ -34,7 +34,7 @@
     left: 0;
     padding: 0.5rem;
 
-    opacity: 0.2;
+    opacity: 0.3;
     border-radius: var(--card-radius);
     background: radial-gradient(circle at top left, var(--swirly-01), var(--swirly-02), var(--swirly-01));
     background-size: 200% 200%;
@@ -44,7 +44,7 @@
   }
 
   .card:hover::before {
-    opacity: 0.4;
+    opacity: 0.6;
     animation: swirly 10s ease-in-out infinite;
   }
 

@@ -43,7 +43,7 @@
     transform: translateY(calc(-100% - 1rem));
     animation: notification 3s ease forwards;
     animation-delay: 1s;
-    border-radius: 1.5rem;
+    --card-radius: 1.5rem;
   }
 
   .bannerNotification:hover {
