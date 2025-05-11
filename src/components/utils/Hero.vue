@@ -58,7 +58,7 @@
     right: 0;
 
     object-fit: cover;
-    border-radius: 1.5rem;
+    border-radius: 2rem;
     width: 100%;
     height: 100%;
     z-index: -1;

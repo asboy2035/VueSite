@@ -1,25 +1,25 @@
 <script setup lang="ts">
-  import { useRoute } from 'vue-router'
-  import { useHead } from '@vueuse/head'
-  import { computed } from 'vue'
-  import InteriorItem from "@/components/layout/InteriorItem.vue";
-  import AppleMusic from "@/components/playlists/AppleMusic.vue";
-  import Spotify from "@/components/playlists/Spotify.vue";
-  import Deezer from "@/components/playlists/Deezer.vue";
-  import LinkIcon from "@/components/apps/LinkIcon.vue";
-  import YoutubeMusic from "@/components/playlists/YoutubeMusic.vue";
-  import Card from "@/components/layout/Card.vue";
-  import HStack from "@/components/layout/HStack.vue";
-  import VStack from "@/components/layout/VStack.vue";
-  import Spacer from "@/components/utils/Spacer.vue";
-  import Grid from "@/components/layout/Grid.vue";
-  import Navbar from "@/components/premade/navbar/Navbar.vue";
-  import Hero from "@/components/utils/Hero.vue";
+  import { ref, onMounted, computed } from "vue"
+  import { useRoute } from "vue-router"
+  import { useHead } from "@vueuse/head"
+  import InteriorItem from "@/components/layout/InteriorItem.vue"
+  import AppleMusic from "@/components/playlists/AppleMusic.vue"
+  import Spotify from "@/components/playlists/Spotify.vue"
+  import Deezer from "@/components/playlists/Deezer.vue"
+  import LinkIcon from "@/components/apps/LinkIcon.vue"
+  import YoutubeMusic from "@/components/playlists/YoutubeMusic.vue"
+  import Card from "@/components/layout/Card.vue"
+  import HStack from "@/components/layout/HStack.vue"
+  import VStack from "@/components/layout/VStack.vue"
+  import Spacer from "@/components/utils/Spacer.vue"
+  import Grid from "@/components/layout/Grid.vue"
+  import Hero from "@/components/utils/Hero.vue"
+  import Navbar from "@/components/premade/navbar/Navbar.vue"
 
   interface PlaylistLink {
     title: string
     url: string
-    type: 'apple' | 'spotify' | 'deezer' | 'youtube'
+    type: "apple" | "spotify" | "deezer" | "youtube"
   }
 
   interface Playlist {
@@ -31,34 +31,48 @@
     links: PlaylistLink[]
   }
 
-  const playlists: Playlist[] = [
-    {
-      slug: 'topsongs',
-      title: 'Top Songs',
-      description: 'My most favorite songs.',
-      author: 'ash.',
-      image: 'https://cdn-images.dzcdn.net/images/playlist/d78fafe72bbeb15fa6bba59373492db4/500x500-000000-80-0-0.jpg',
-      links: [
-        { title: 'Apple', url: 'https://music.apple.com/us/playlist/top-songs/pl.u-leyl2WASMo634Ym', type: 'apple' },
-        { title: 'Spotify', url: 'https://open.spotify.com/playlist/7aOCrHrA8N7CKj8jhT2o9F', type: 'spotify' },
-        { title: 'Deezer', url: 'https://www.deezer.com/en/playlist/13650302661', type: 'deezer' },
-        { title: 'YouTube', url: 'https://music.youtube.com/playlist?list=PLFsL-Utna_XG8xPD5T1vD0hjaesh-cKiw', type: 'youtube' },
-      ]
-    }
-  ]
-
+  const playlists = ref<Playlist[]>([])
   const route = useRoute()
-  const playlist = computed(() => playlists.find(p => p.slug === route.params.slug))
+
+  async function fetchPlaylists() {
+    try {
+      const res = await fetch("https://api.asboy2035.com/playlists")
+      playlists.value = await res.json()
+    } catch (error) {
+      console.error("Failed to load playlists:", error)
+    }
+  }
+
+  const playlist = computed(() => playlists.value.find(p => p.slug === route.params.slug))
+
+  onMounted(() => {
+    fetchPlaylists()
+  })
+
+  if (playlist.value) {
+    useHead({
+      title: `${playlist.value.title} (Playlist)`,
+      meta: [
+        { name: "description", content: playlist.value.description },
+        { property: "og:title", content: `${playlist.value.title} (Playlist)` },
+        { property: "og:description", content: playlist.value.description },
+        { property: "og:image", content: playlist.value.image },
+      ],
+      link: [
+        { rel: "icon", href: playlist.value.image }
+      ]
+    })
+  }
 
   function getIconComponent(type: string) {
     switch (type) {
-      case 'apple':
+      case "apple":
         return AppleMusic
-      case 'spotify':
+      case "spotify":
         return Spotify
-      case 'deezer':
+      case "deezer":
         return Deezer
-      case 'youtube':
+      case "youtube":
         return YoutubeMusic
       default:
         return LinkIcon
@@ -71,7 +85,8 @@
       meta: [
         { name: 'description', content: playlist.value.description },
         { property: 'og:title', content: `${playlist.value.title} (Playlist)` },
-        { property: 'og:description', content: playlist.value.description }
+        { property: 'og:description', content: playlist.value.description },
+        { property: 'og:image', content: "/images/Playlists.jpg" },
       ],
       link: [
         { rel: 'icon', href: playlist.value.image }
@@ -129,5 +144,11 @@
 <style scoped>
   .playlistArt {
       width: 14rem;
+  }
+
+  @media (max-width: 35rem) {
+    .playlistArt {
+      width: 100%;
+    }
   }
 </style>

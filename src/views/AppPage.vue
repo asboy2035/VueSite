@@ -4,24 +4,24 @@
   import type { AppPageMeta } from '@/apps'
   import { ref, onMounted, computed } from 'vue'
   import { useHead } from '@vueuse/head'
-  import Hero from "@/components/utils/Hero.vue";
-  import BottomFooter from "@/components/premade/BottomFooter.vue";
-  import { marked } from 'marked';
-  import Card from "@/components/layout/Card.vue";
-  import UpdatedBadge from "@/components/apps/UpdatedBadge.vue";
+  import Hero from "@/components/utils/Hero.vue"
+  import BottomFooter from "@/components/premade/BottomFooter.vue"
+  import { marked } from 'marked'
+  import Card from "@/components/layout/Card.vue"
+  import UpdatedBadge from "@/components/apps/UpdatedBadge.vue"
 
   import GithubIcon from '@/components/apps/GithubIcon.vue'
   import AppStoreIcon from '@/components/apps/AppStoreIcon.vue'
   import LinkIcon from '@/components/apps/LinkIcon.vue'
-  import HStack from "@/components/layout/HStack.vue";
-  import Navbar from "@/components/premade/navbar/Navbar.vue";
+  import HStack from "@/components/layout/HStack.vue"
+  import Navbar from "@/components/premade/navbar/Navbar.vue"
 
   const route = useRoute()
   const slug = route.params.slug as string
   const app = apps.find(app => app.slug === slug) as AppPageMeta | undefined
   const longDescriptionRaw = ref('')
 
-  // Add computed property to render markdown
+  // Add computed property to render Markdown
   const longDescription = computed(() => {
     return marked(longDescriptionRaw.value);
   })

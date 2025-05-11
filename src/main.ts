@@ -6,6 +6,7 @@ import { router } from './router'
 const app = createApp(App)
 const head = createHead()
 
-app.use(router)
-app.use(head)
-app.mount('#app')
+app
+  .use(router)
+  .use(head)
+  .mount('#app')

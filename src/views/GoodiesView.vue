@@ -11,6 +11,16 @@
   import Navbar from "@/components/premade/navbar/Navbar.vue"
   import {Icon} from "@iconify/vue"
 
+  useHead({
+    title: "ash's Goodies",
+    meta: [
+      { name: "description", content: "Misc stuff from me." },
+      { property: "og:title", content: "ash's Goodies" },
+      { property: "og:description", content: "Misc stuff from me." },
+      { property: "og:image", content: "/images/Goodies.jpg" }
+    ]
+  })
+
   interface CursorAsset {
     type: string
     path: string
@@ -25,29 +35,14 @@
 
   const cursors = ref<Cursor[]>([])
 
-  onMounted(() => {
-    cursors.value = [
-      {
-        name: "Bibata Modern",
-        version: "0",
-        downloadURL: "/bibataModern/ash.bibatamodern.cape",
-        assets: [
-          { type: "Pointer", path: "/cursors/bibataModern/Pointer.png" },
-          { type: "Pointing", path: "/cursors/bibataModern/Pointing-Hand.png" },
-          { type: "Copy", path: "/cursors/bibataModern/Copy.png" },
-          { type: "Camera", path: "/cursors/bibataModern/Camera-v2.png" }
-        ]
-      }
-    ]
-  })
-
-  useHead({
-    title: "ash's Goodies",
-    meta: [
-      { name: "description", content: "Misc stuff from me." },
-      { property: "og:title", content: "ash's Goodies" },
-      { property: "og:description", content: "Misc stuff from me." }
-    ]
+  onMounted(async () => {
+    try {
+      const response = await fetch("https://api.asboy2035.com/cursors")
+      if (!response.ok) throw new Error(`Failed to fetch: ${response.statusText}`)
+      cursors.value = await response.json()
+    } catch (error) {
+      console.error("Error fetching cursors:", error)
+    }
   })
 </script>
 

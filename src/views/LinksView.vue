@@ -18,7 +18,8 @@
     meta: [
       { name: "description", content: "My socials, contacts, and more :)" },
       { property: "og:title", content: "ash's Links" },
-      { property: "og:description", content: "My socials, contacts, and more :)" }
+      { property: "og:description", content: "My socials, contacts, and more :)" },
+      { property: "og:image", content: "/images/Links.jpg" }
     ]
   })
 </script>

@@ -23,46 +23,47 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import CustomizerPanel from '@/components/charCards/CustomizerPanel.vue'
-import CardPreview from '@/components/charCards/CardPreview.vue'
-import html2canvas from 'html2canvas'
-import VStack from "@/components/layout/VStack.vue";
-import Navbar from "@/components/premade/navbar/Navbar.vue";
-import Grid from "@/components/layout/Grid.vue";
-import Hero from "@/components/utils/Hero.vue";
-import { useHead } from '@vueuse/head'
+  import { ref } from 'vue'
+  import CustomizerPanel from '@/components/charCards/CustomizerPanel.vue'
+  import CardPreview from '@/components/charCards/CardPreview.vue'
+  import html2canvas from 'html2canvas'
+  import VStack from "@/components/layout/VStack.vue"
+  import Navbar from "@/components/premade/navbar/Navbar.vue"
+  import Grid from "@/components/layout/Grid.vue"
+  import Hero from "@/components/utils/Hero.vue"
+  import { useHead } from '@vueuse/head'
 
-useHead({
-  title: "Create Character Card",
-  meta: [
-    { name: "description", content: "Create your own personal character card." },
-    { property: "og:title", content: "Create Character Card" },
-    { property: "og:description", content: "Create your own personal character card." }
-  ]
-})
-
-const cardData = ref({
-  name: '',
-  username: '',
-  bio: '',
-  url: 'asboy2035.com',
-  avatar: null,
-  banner: null,
-  interests: ['Existing', 'You', 'Computers'],
-  accent: '#A084E8',
-})
-
-const cardRef = ref(null)
-
-const exportCard = async (includeBackground) => {
-  const el = cardRef.value.$el
-  const canvas = await html2canvas(el, {
-    backgroundColor: includeBackground ? null : 'transparent'
+  useHead({
+    title: "Create Character Card",
+    meta: [
+      { name: "description", content: "Create your own personal character card." },
+      { property: "og:title", content: "Create Character Card" },
+      { property: "og:description", content: "Create your own personal character card." },
+      { property: "og:image", content: "/images/Creator.jpg" }
+    ]
   })
-  const link = document.createElement('a')
-  link.download = 'char-card.png'
-  link.href = canvas.toDataURL()
-  link.click()
-}
+
+  const cardData = ref({
+    name: '',
+    username: '',
+    bio: '',
+    url: 'asboy2035.com',
+    avatar: null,
+    banner: null,
+    interests: ['Existing', 'You', 'Computers'],
+    accent: '#A084E8',
+  })
+
+  const cardRef = ref(null)
+
+  const exportCard = async (includeBackground) => {
+    const el = cardRef.value.$el
+    const canvas = await html2canvas(el, {
+      backgroundColor: includeBackground ? null : 'transparent'
+    })
+    const link = document.createElement('a')
+    link.download = 'char-card.png'
+    link.href = canvas.toDataURL()
+    link.click()
+  }
 </script>

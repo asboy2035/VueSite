@@ -1,93 +1,54 @@
 <script setup lang="ts">
-  import Hero from "@/components/utils/Hero.vue";
-  import Spacer from "@/components/utils/Spacer.vue";
-  import VStack from "@/components/layout/VStack.vue";
-  import Navbar from "@/components/premade/navbar/Navbar.vue";
-  import Grid from "@/components/layout/Grid.vue";
-  import Card from "@/components/layout/Card.vue";
-  import {Icon} from "@iconify/vue";
+  import Hero from "@/components/utils/Hero.vue"
+  import Spacer from "@/components/utils/Spacer.vue"
+  import VStack from "@/components/layout/VStack.vue"
+  import Navbar from "@/components/premade/navbar/Navbar.vue"
+  import Grid from "@/components/layout/Grid.vue"
+  import Card from "@/components/layout/Card.vue"
+  import {Icon} from "@iconify/vue"
 
   import { useHead } from '@vueuse/head'
-  import BottomFooter from "@/components/premade/BottomFooter.vue";
-  import AppLink from "@/components/apps/AppLink.vue";
-  import DynamicImage from "@/components/utils/DynamicImage.vue";
+  import BottomFooter from "@/components/premade/BottomFooter.vue"
+  import AppLink from "@/components/apps/AppLink.vue"
+  import DynamicImage from "@/components/utils/DynamicImage.vue"
+  import { ref, onMounted } from "vue"
 
   useHead({
     title: "ash's Apps",
     meta: [
       { name: "description", content: "My web/Apple apps." },
       { property: "og:title", content: "ash's Apps" },
-      { property: "og:description", content: "My web/Apple apps." }
+      { property: "og:description", content: "My web/Apple apps." },
+      { property: "og:image", content: "/images/Apps.png"}
     ]
   })
 
+
   interface App {
-    name: string;
-    description: string;
-    image: string;
-    link: string;
-    disabled?: boolean;
-    github?: string;
+    name: string
+    description: string
+    image: string
+    link: string
+    disabled?: boolean
+    github?: string
   }
 
   interface AppCategory {
-    name: string;
-    apps: App[];
+    name: string
+    apps: App[]
   }
 
-  const appsData: AppCategory[] = [
-    {
-      name: "Web Apps",
-      apps: [
-        {
-          name: "tewFA",
-          description: "A simple and modern 2FA app.",
-          image: "https://tfa.asboy2035.com/assets/icon-1024.png",
-          link: "https://tfa.asboy2035.com/",
-          github: "https://github.com/tewFA/tewFA",
-        },
-        {
-          name: "Astronomer",
-          description: "An app with all the planets :)",
-          image: "https://ashtronomy.pages.dev/Images/Astronomy-Icon.png",
-          link: "https://ashtronomy.pages.dev/",
-          github: "https://github.com/asboy2035/Astronomy/",
-        },
-        {
-          name: "Clocs",
-          description: "Keep track of everyone's time.",
-          image: "https://clocs.pages.dev/Icons/Icon.png",
-          link: "https://clocs.pages.dev/",
-          github: "https://github.com/asboy2035/Clocs/",
-        },
-        {
-          name: "Vault",
-          description: "A private space for your ideas.",
-          image: "https://byteforge-site-3-3.byteforge.pages.dev/Images/Vault-Icon.jpeg",
-          link: "/vault/",
-          github: "https://github.com/ByteForgeProd/ByteSite/tree/byteforge-site-3.3/vault/",
-        },
-      ],
-    },
-    {
-      name: "Mac Apps",
-      apps: [
-        {
-          name: "Stand",
-          description: "A Mac app for standing desks.",
-          image: "/images/icons/Stand-Icon.png",
-          link: "./stand",
-        },
-        {
-          name: "BigTime",
-          description: "A minimal macOS time tracker.",
-          image: "/images/icons/BigTime-Icon.png",
-          link: "#",
-          disabled: true,
-        },
-      ],
-    },
-  ];
+  const appsData = ref<AppCategory[]>([])
+
+  onMounted(async () => {
+    try {
+      const response = await fetch("https://api.asboy2035.com/apps")
+      if (!response.ok) throw new Error(`Failed to fetch: ${response.statusText}`)
+      appsData.value = await response.json()
+    } catch (error) {
+      console.error("Error fetching apps:", error)
+    }
+  })
 </script>
 
 <template>

@@ -1,15 +1,16 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-
-const props = defineProps<{
-  to: string
-  disabled?: boolean
-  label?: string
-}>()
-
-const isExternal = computed(() => {
-  return /^https?:\/\//.test(props.to)
-})
+  import { Icon } from '@iconify/vue'
+  import { computed } from 'vue'
+  
+  const props = defineProps<{
+    to: string
+    disabled?: boolean
+    label?: string
+  }>()
+  
+  const isExternal = computed(() => {
+    return /^https?:\/\//.test(props.to)
+  })
 </script>
 
 <template>
@@ -22,6 +23,7 @@ const isExternal = computed(() => {
     class="app-link"
   >
     <button :disabled="disabled ?? false">
+      <icon :icon="disabled ? 'solar:clock-circle-line-duotone' : 'solar:arrow-right-up-line-duotone'" width="24" height="24" />
       {{ disabled ? 'Soon' : (label ?? 'Go') }}
     </button>
   </component>
