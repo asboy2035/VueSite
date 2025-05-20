@@ -82,14 +82,6 @@ body {
   }
 }
 
-@font-face {
-  font-family: 'DT Getai Grotesk Display Black';
-  src: url('/public/fonts/DTGetaiGroteskDisplayBlack.otf') format('opentype'),
-    url('/public/fonts/DTGetaiGroteskDisplayBlack.woff2') format('woff');
-  font-weight: bold;
-  font-style: normal;
-}
-
 h1, h2, h3, h4, h5, h6, p {
   margin: 0.25rem;
 }
@@ -147,7 +139,7 @@ button:hover:not(:disabled), .avatar:hover {
 button:active, .avatar:active {
   transform: scale(1.05);
 }
-button svg {
+button ::v-deep(svg) {
   width: 1rem;
 }
 button.transparent {
