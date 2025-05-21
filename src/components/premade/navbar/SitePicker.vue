@@ -30,7 +30,7 @@
         />
       </router-link>
 
-      <a href="https://guide.asboy2035.com/">
+      <a href="https://guides.asboy2035.com/">
         <site-pick
           title="Guides"
           icon="solar:book-line-duotone"
