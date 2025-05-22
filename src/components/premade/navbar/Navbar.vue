@@ -169,7 +169,7 @@
               @click="toggleSiteSwitcher"
             >
               <h1>Port</h1>
-              <Icon icon="line-md:chevron-down" width="24" height="24" />
+              <Icon icon="fa6-solid:chevron-down" width="24" height="24" />
             </h-stack>
           </h-stack>
         </h-stack>
