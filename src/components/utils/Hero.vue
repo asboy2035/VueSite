@@ -1,5 +1,5 @@
 <script>
-  import DynamicImage from "@/components/utils/DynamicImage.vue";
+  import DynamicImage from "@/components/utils/DynamicImage.vue"
 
   export default {
     components: {DynamicImage},

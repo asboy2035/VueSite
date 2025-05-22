@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import VStack from "@/components/layout/VStack.vue";
+  import VStack from "@/components/layout/VStack.vue"
 </script>
 
 <template>

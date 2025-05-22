@@ -57,7 +57,7 @@
   import {ProgressiveBlur} from "vue-progressive-blur"
 
   const showDomainTip = ref(false)
-  const redirectLink = `https://asboy2035.com${location.pathname}${location.search}${location.hash}`;
+  const redirectLink = `https://asboy2035.com${location.pathname}${location.search}${location.hash}`
 
   const cover = ref()
   const transitionable = ref()
@@ -97,11 +97,12 @@
   }
 
   .progBlur {
+    --blur-height: 5rem;
     position: absolute;
     left: 0;
     right: 0;
-    height: 4rem;
+    height: var(--blur-height);
     z-index: 10;
-    transform: translateY(calc(100vh - 4rem));
+    transform: translateY(calc(100vh - var(--blur-height)));
   }
 </style>

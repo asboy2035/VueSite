@@ -1,29 +1,29 @@
 <script setup lang="ts">
-  import { ref, onMounted } from 'vue';
-  import Card from "@/components/layout/Card.vue";
-  import VStack from "@/components/layout/VStack.vue";
-  import HStack from "@/components/layout/HStack.vue";
-  import SitePicker from "@/components/premade/navbar/SitePicker.vue";
-  import DynamicImage from "@/components/utils/DynamicImage.vue";
+  import { ref, onMounted } from 'vue'
+  import Card from "@/components/layout/Card.vue"
+  import VStack from "@/components/layout/VStack.vue"
+  import HStack from "@/components/layout/HStack.vue"
+  import SitePicker from "@/components/premade/navbar/SitePicker.vue"
+  import DynamicImage from "@/components/utils/DynamicImage.vue"
 
-  const currentTime = ref('');
+  const currentTime = ref('')
 
   const updateTime = () => {
-    const now = new Date();
+    const now = new Date()
     const options: Intl.DateTimeFormatOptions = {
       hour: '2-digit',
       minute: '2-digit',
       second: '2-digit',
       timeZone: 'Europe/Paris',
       hour12: false,
-    };
+    }
     currentTime.value = now.toLocaleTimeString('en-GB', options);
-  };
+  }
 
   onMounted(() => {
-    updateTime(); // Initialize immediately
-    setInterval(updateTime, 1000); // Update every second
-  });
+    updateTime() // Initialize immediately
+    setInterval(updateTime, 1000) // Update every second
+  })
 </script>
 
 <template>
@@ -58,7 +58,7 @@
 </template>
 
 <style scoped>
-.sidebarView {
-  width: 20rem;
-}
+  .sidebarView {
+    width: 20rem;
+  }
 </style>
