@@ -21,7 +21,11 @@
 <template>
   <card class="sitePicker">
     <v-stack>
-      <h2>Sites</h2>
+      <h-stack class="autospace fullWidth">
+        <h2>Sites</h2>
+<!--        Insert close button here -->
+        <slot />
+      </h-stack>
 
       <router-link to="/">
         <site-pick

@@ -83,7 +83,7 @@
 
   @media (max-width: 35rem) {
     .card {
-      --card-radius: 1.75rem;
+      --card-radius: 2rem;
 
       width: calc(100% - 2rem);
       padding: 1rem;

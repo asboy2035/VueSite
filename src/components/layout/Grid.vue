@@ -8,7 +8,7 @@
   .grid {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     align-items: stretch;
   }
 
@@ -17,7 +17,7 @@
   }
 
   .grid.tight {
-    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
     width: 100%;
   }
 

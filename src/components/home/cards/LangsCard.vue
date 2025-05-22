@@ -3,7 +3,7 @@
   import InteriorItem from "@/components/layout/InteriorItem.vue"
   import Grid from "@/components/layout/Grid.vue"
   import Spacer from "@/components/utils/Spacer.vue"
-  import {Icon} from "@iconify/vue";
+  import {Icon} from "@iconify/vue"
 </script>
 
 <template>

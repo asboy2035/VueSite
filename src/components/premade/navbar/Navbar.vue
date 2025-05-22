@@ -10,6 +10,7 @@
   import NavigationButton from "@/components/premade/navbar/NavigationButton.vue"
   import SitePicker from "@/components/premade/navbar/SitePicker.vue"
   import { Icon } from '@iconify/vue'
+  import {ProgressiveBlur} from "vue-progressive-blur"
 
   const showSwitcher = ref(false)
 
@@ -78,7 +79,12 @@
           <h-stack class="tight">
             <interior-item v-for="app in apps" :key="app.name">
               <a :href="app.link" target="_blank">
-                <dynamic-image class="launcherImage" :src="app.icon" :alt="app.name + ' icon'" radius="0.35rem" />
+                <dynamic-image
+                  class="launcherImage"
+                  :src="app.icon"
+                  :alt="app.name + ' icon'"
+                  radius="0.35rem"
+                />
                 <p>{{ app.name }}</p>
               </a>
             </interior-item>
@@ -90,7 +96,12 @@
           <h-stack class="tight">
             <interior-item v-for="creator in creators" :key="creator.name">
               <a :href="creator.link">
-                <dynamic-image class="launcherImage" :src="creator.icon" :alt="creator.name + ' icon'" radius="0.35rem" />
+                <dynamic-image
+                  class="launcherImage"
+                  :src="creator.icon"
+                  :alt="creator.name + ' icon'"
+                  radius="0.35rem"
+                />
                 <p>{{ creator.name }}</p>
               </a>
             </interior-item>
@@ -103,20 +114,49 @@
       <navigation-links />
     </header>
 
-    <site-picker id="siteSwitcher" :class="{ hidden: !showSiteSwitcher }" />
-
+    <site-picker
+      id="siteSwitcher"
+      :class="{ hidden: !showSiteSwitcher }"
+    >
+      <button @click="toggleSiteSwitcher()" style="border-radius: 2rem">
+        <Icon icon="mingcute:close-fill" width="24" height="24" />
+      </button>
+    </site-picker>
+    <progressive-blur
+      class="siteSwitchBlur"
+      :blur="64"
+      :border-radius="0"
+      :class="{ hidden: !showSiteSwitcher }"
+    />
     <h-stack>
       <button @click="showSwitcher = !showSwitcher" class="createBtn">
-        <Icon icon="heroicons:sparkles-20-solid" class="growIn" v-if="!showSwitcher" width="20" height="20" />
-        <Icon icon="mingcute:close-fill" class="spinIn" v-if="showSwitcher" width="20" height="20" />
+        <Icon
+          icon="heroicons:sparkles-20-solid"
+          class="growIn" v-if="!showSwitcher"
+          width="20" height="20"
+        />
+        <Icon
+          icon="mingcute:close-fill"
+          class="spinIn" v-if="showSwitcher"
+          width="20" height="20"
+        />
       </button>
 
       <header :class="{ desktopLinks: hideProfile }">
         <h-stack v-if="hideProfile !== true" class="profile transparent">
           <navigation-button link="/" id="homeButtonContainer" text="Home">
-            <img class="avatar" src="/images/avatar.png" alt="ash's Avatar (Go Home)" id="avatarButton">
+            <img
+              class="avatar"
+              src="/images/avatar.png"
+              alt="ash's Avatar (Go Home)"
+              id="avatarButton"
+            >
 
-            <Icon icon="solar:home-angle-bold-duotone" aria-label="Go Home" id="homeButton" style="scale: 1.25" width="24" height="24" />
+            <Icon
+              icon="solar:home-angle-bold-duotone"
+              aria-label="Go Home" id="homeButton"
+              style="scale: 1.25" width="24" height="24"
+            />
           </navigation-button>
 
           <h-stack style="margin-right: 0.75rem">
@@ -129,9 +169,7 @@
               @click="toggleSiteSwitcher"
             >
               <h1>Port</h1>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
-                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="m112 184l144 144l144-144"/>
-              </svg>
+              <Icon icon="line-md:chevron-down" width="24" height="24" />
             </h-stack>
           </h-stack>
         </h-stack>
@@ -140,8 +178,16 @@
       </header>
 
       <button id="mobileButton" @click="toggleNavigation">
-        <Icon icon="solar:compass-bold" class="growIn" v-if="!showMobileNav" width="20" height="20" />
-        <Icon icon="mingcute:close-fill" class="spinIn" v-if="showMobileNav" width="20" height="20" />
+        <Icon
+          icon="solar:compass-bold"
+          class="growIn" v-if="!showMobileNav"
+          width="20" height="20"
+        />
+        <Icon
+          icon="mingcute:close-fill"
+          class="spinIn" v-if="showMobileNav"
+          width="20" height="20"
+        />
       </button>
     </h-stack>
   </v-stack>
@@ -304,5 +350,19 @@
   }
   #siteSwitcherButton.active > svg {
     transform: rotate(-90deg);
+  }
+
+  #siteSwitcher {
+    z-index: 20;
+  }
+
+  .siteSwitchBlur {
+    --siteSwitchBlurHeight: 32rem;
+    position: fixed !important;
+    right: 0;
+    left: 0;
+    transform: translateY(calc(100vh - var(--siteSwitchBlurHeight)));
+    height: var(--siteSwitchBlurHeight);
+    z-index: 19;
   }
 </style>

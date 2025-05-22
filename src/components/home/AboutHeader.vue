@@ -18,12 +18,11 @@
 
 <template>
   <fullscreen-cover :class="{ hidden: !showSiteSwitcher }">
-    <v-stack>
-      <site-picker />
+    <site-picker>
       <button @click="toggleSiteSwitcher()" style="border-radius: 2rem">
         <Icon icon="mingcute:close-fill" width="24" height="24" />
       </button>
-    </v-stack>
+    </site-picker>
   </fullscreen-cover>
 
   <card class="stackModeOnly">

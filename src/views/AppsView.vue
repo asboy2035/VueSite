@@ -12,6 +12,7 @@
   import AppLink from "@/components/apps/AppLink.vue"
   import DynamicImage from "@/components/utils/DynamicImage.vue"
   import { ref, onMounted } from "vue"
+  import InteriorItem from "@/components/layout/InteriorItem.vue";
 
   useHead({
     title: "ash's Apps",
@@ -70,7 +71,7 @@
       <card v-for="category in appsData" :key="category.name">
         <h2>{{ category.name }}</h2>
         <grid class="app-grid">
-          <div v-for="app in category.apps" :key="app.name" class="app-card-v2">
+          <interior-item v-for="app in category.apps" :key="app.name" class="app-card-v2">
             <div class="app-image">
               <dynamic-image class="app-image" :src="app.image" :alt="app.name + ' Logo'" />
             </div>
@@ -88,7 +89,7 @@
                 </button>
               </a>
             </div>
-          </div>
+          </interior-item>
         </grid>
       </card>
     </v-stack>
@@ -111,7 +112,6 @@
     gap: 0.5rem;
   }
   .app-card-v2 {
-    display: flex;
     flex-direction: row;
     gap: 0.75rem;
     padding: 0.5rem 0.75rem;
@@ -120,10 +120,13 @@
     background: var(--foreground-color);
     border-radius: 1rem;
   }
+  .app-card-v2 ::v-deep(svg) {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
   .app-image {
-    width: 4rem;
-    height: 4rem;
-    border-radius: 1rem;
+    width: 3rem;
+    height: 3rem;
   }
   .app-details {
     display: flex;
