@@ -4,11 +4,11 @@
   import VStack from '@/components/layout/VStack.vue'
   import Card from '@/components/layout/Card.vue'
   import InteriorItem from '@/components/layout/InteriorItem.vue'
-  import FullscreenCover from "@/components/premade/FullscreenCover.vue";
-  import DynamicImage from "@/components/utils/DynamicImage.vue";
-  import NavigationLinks from "@/components/premade/navbar/NavigationLinks.vue";
-  import NavigationButton from "@/components/premade/navbar/NavigationButton.vue";
-  import SitePicker from "@/components/premade/navbar/SitePicker.vue";
+  import FullscreenCover from "@/components/premade/FullscreenCover.vue"
+  import DynamicImage from "@/components/utils/DynamicImage.vue"
+  import NavigationLinks from "@/components/premade/navbar/NavigationLinks.vue"
+  import NavigationButton from "@/components/premade/navbar/NavigationButton.vue"
+  import SitePicker from "@/components/premade/navbar/SitePicker.vue"
   import { Icon } from '@iconify/vue'
 
   const showSwitcher = ref(false)
@@ -107,8 +107,8 @@
 
     <h-stack>
       <button @click="showSwitcher = !showSwitcher" class="createBtn">
-        <Icon icon="heroicons:sparkles-20-solid" class="growIn" v-if="!showSwitcher" width="24" height="24" />
-        <Icon icon="mingcute:close-fill" class="spinIn" v-if="showSwitcher" width="24" height="24" />
+        <Icon icon="heroicons:sparkles-20-solid" class="growIn" v-if="!showSwitcher" width="20" height="20" />
+        <Icon icon="mingcute:close-fill" class="spinIn" v-if="showSwitcher" width="20" height="20" />
       </button>
 
       <header :class="{ desktopLinks: hideProfile }">
@@ -140,8 +140,8 @@
       </header>
 
       <button id="mobileButton" @click="toggleNavigation">
-        <Icon icon="solar:compass-bold" class="growIn" v-if="!showMobileNav" width="24" height="24" />
-        <Icon icon="mingcute:close-fill" class="spinIn" v-if="showMobileNav" width="24" height="24" />
+        <Icon icon="solar:compass-bold" class="growIn" v-if="!showMobileNav" width="20" height="20" />
+        <Icon icon="mingcute:close-fill" class="spinIn" v-if="showMobileNav" width="20" height="20" />
       </button>
     </h-stack>
   </v-stack>
@@ -153,7 +153,7 @@
     flex-wrap: wrap;
     bottom: 1rem;
     max-width: calc(100vw - 2rem);
-    z-index: 20;
+    z-index: 19;
     align-items: center;
   }
 

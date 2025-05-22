@@ -23,7 +23,7 @@
 
   // Add computed property to render Markdown
   const longDescription = computed(() => {
-    return marked(longDescriptionRaw.value);
+    return marked(longDescriptionRaw.value)
   })
 
   onMounted(async () => {

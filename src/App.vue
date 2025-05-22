@@ -1,8 +1,10 @@
 <template>
   <transitionable ref="transitionable">
     <h1 class="hidden">Your CSS is disabled!</h1>
-    <page-mask />
     <router-view />
+    <div class="progBlurContainer">
+      <progressive-blur class="progBlur" blur="48" border-radius="0" />
+    </div>
   </transitionable>
   <transition-element ref="cover" />
 
@@ -43,16 +45,16 @@
 
 <script setup>
   import { ref, onMounted } from 'vue'
-  import TransitionElement from "@/components/premade/TransitionElement.vue";
-  import { useRouter } from "vue-router";
-  import Transitionable from "@/components/premade/Transitionable.vue";
-  import Modal from "@/components/utils/Modal.vue";
-  import Spacer from "@/components/utils/Spacer.vue";
-  import HStack from "@/components/layout/HStack.vue";
-  import BannerNotification from "@/components/utils/BannerNotification.vue";
-  import VStack from "@/components/layout/VStack.vue";
+  import TransitionElement from "@/components/premade/TransitionElement.vue"
+  import { useRouter } from "vue-router"
+  import Transitionable from "@/components/premade/Transitionable.vue"
+  import Modal from "@/components/utils/Modal.vue"
+  import Spacer from "@/components/utils/Spacer.vue"
+  import HStack from "@/components/layout/HStack.vue"
+  import BannerNotification from "@/components/utils/BannerNotification.vue"
+  import VStack from "@/components/layout/VStack.vue"
   import {Icon} from "@iconify/vue"
-  import PageMask from "@/components/premade/PageMask.vue";
+  import {ProgressiveBlur} from "vue-progressive-blur"
 
   const showDomainTip = ref(false)
   const redirectLink = `https://asboy2035.com${location.pathname}${location.search}${location.hash}`;
@@ -82,3 +84,24 @@
     })
   })
 </script>
+
+<style scoped>
+  .progBlurContainer {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    pointer-events: none;
+  }
+
+  .progBlur {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 4rem;
+    z-index: 10;
+    transform: translateY(calc(100vh - 4rem));
+  }
+</style>
