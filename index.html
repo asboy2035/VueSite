@@ -11,7 +11,63 @@
     <meta property="og:description" content="My (new) site :)" />
   </head>
   <body>
-    <script type="module" src="/src/main.ts"></script>
+    <div
+      id="loading-screen"
+      style="
+        position: fixed;
+        inset: 0;
+        background: black;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: sans-serif;
+        z-index: 9999;"
+    >
+      <div
+        style="
+          display: flex;
+          font-size: 1.5em;
+          margin-bottom: 0.5em;
+          gap: 0.5rem"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24" height="24"
+          viewBox="0 0 24 24"
+        >
+          <path fill="currentColor" d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,19a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z" opacity="0.25"/>
+          <path fill="currentColor" d="M12,4a8,8,0,0,1,7.89,6.7A1.53,1.53,0,0,0,21.38,12h0a1.5,1.5,0,0,0,1.48-1.75,11,11,0,0,0-21.72,0A1.5,1.5,0,0,0,2.62,12h0a1.53,1.53,0,0,0,1.49-1.3A8,8,0,0,1,12,4Z">
+            <animateTransform attributeName="transform" dur="0.75s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/>
+          </path>
+        </svg>
+
+        loading...
+      </div>
+
+      <div
+        style="
+          font-size: 0.9em;
+          color: gray;"
+      >
+        problem? <a href="mailto:ash@asboy2035.com" style="color: indigo;">contact me</a>
+      </div>
+    </div>
+
+    <script type="module">
+      import '/src/main.ts'
+
+      window.addEventListener('DOMContentLoaded', () => {
+        const checkAppReady = setInterval(() => {
+          if (document.getElementById('app')?.children.length) {
+            document.getElementById('loading-screen')?.remove()
+            clearInterval(checkAppReady);
+          }
+        }, 100)
+      })
+    </script>
+
     <div id="app"></div>
   </body>
 </html>
