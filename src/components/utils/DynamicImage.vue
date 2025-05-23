@@ -31,26 +31,23 @@
   </div>
 </template>
 
-<style scoped>
-  .image-wrapper {
-    display: block;
-    overflow: hidden;
-    position: relative;
-    border-radius: 1rem;
-  }
+<style scoped lang="sass">
+  .image-wrapper
+    display: block
+    overflow: hidden
+    position: relative
+    border-radius: 1rem
 
-  .image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: blur(1rem);
-    transition: filter 0.3s ease, scale 0.3s ease;
-    transform: scale(1.5);
-    will-change: filter, transform;
-  }
+  .image
+    width: 100%
+    height: 100%
+    object-fit: cover
+    filter: blur(1rem)
+    transition: filter 0.3s ease, scale 0.3s ease
+    transform: scale(1.5)
+    will-change: filter, transform
 
-  .image.loaded {
-    filter: blur(0);
-    transform: scale(1);
-  }
+  .image.loaded
+    filter: blur(0)
+    transform: scale(1)
 </style>

@@ -11,13 +11,11 @@
   </fullscreen-cover>
 </template>
 
-<style scoped>
-  .modalCard {
-    width: fit-content;
-    max-width: 50rem;
-  }
+<style scoped lang="sass">
+  .modalCard
+    width: fit-content
+    max-width: 50rem
 
-  .modalCover {
-    z-index: 5;
-  }
+  .modalCover
+    z-index: 5
 </style>

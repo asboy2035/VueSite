@@ -57,8 +57,7 @@
   </div>
 </template>
 
-<style scoped>
-  .sidebarView {
-    width: 20rem;
-  }
+<style scoped lang="sass">
+  .sidebarView
+    width: 20rem
 </style>

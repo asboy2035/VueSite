@@ -4,24 +4,20 @@
   </div>
 </template>
 
-<style scoped>
-  .grid {
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-    align-items: stretch;
-  }
+<style scoped lang="sass">
+  .grid
+    display: grid
+    width: 100%
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr))
+    align-items: stretch
 
-  .grid > * {
-    display: inline-flex;
-  }
+  .grid > *
+    display: inline-flex
 
-  .grid.tight {
-    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
-    width: 100%;
-  }
+  .grid.tight
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr))
+    width: 100%
 
-  .grid.tight > .card {
-    width: calc(100% - 1.5rem);
-  }
+  .grid.tight > .card
+    width: calc(100% - 1.5rem)
 </style>

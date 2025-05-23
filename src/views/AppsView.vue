@@ -12,7 +12,7 @@
   import AppLink from "@/components/apps/AppLink.vue"
   import DynamicImage from "@/components/utils/DynamicImage.vue"
   import { ref, onMounted } from "vue"
-  import InteriorItem from "@/components/layout/InteriorItem.vue";
+  import InteriorItem from "@/components/layout/InteriorItem.vue"
 
   useHead({
     title: "ash's Apps",
@@ -103,51 +103,50 @@
   </div>
 </template>
 
-<style scoped>
-  #appsContainer {
-    width: 100%;
-  }
-  .app-grid {
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    gap: 0.5rem;
-  }
-  .app-card-v2 {
-    flex-direction: row;
-    gap: 0.75rem;
-    padding: 0.5rem 0.75rem;
-    align-items: center;
+<style scoped lang="sass">
+  #appsContainer
+    width: 100%
 
-    background: var(--foreground-color);
-    border-radius: 1rem;
-  }
-  .app-card-v2 ::v-deep(svg) {
-    width: 1.25rem;
-    height: 1.25rem;
-  }
-  .app-image {
-    width: 3rem;
-    height: 3rem;
-  }
-  .app-details {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    flex-grow: 1;
-    overflow: scroll;
-    text-wrap: nowrap;
+  .app-grid
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr))
+    gap: 0.5rem
 
-    border-radius: 0.5rem;
-  }
-  .app-downloads {
-    display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
-    align-items: center;
-    justify-content: center;
-  }
+  .app-card-v2
+    flex-direction: row
+    gap: 0.75rem
+    padding: 0.5rem 0.75rem
+    align-items: center
 
-  .app-downloads svg {
-    height: 1.25rem;
-  }
+    background: var(--foreground-color)
+    border-radius: 1rem
+
+  .app-card-v2 ::v-deep(svg)
+    width: 1.25rem
+    height: 1.25rem
+
+  .app-image
+    width: 3rem
+    height: 3rem
+
+  .app-details
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: flex-start
+    flex-grow: 1
+    overflow: scroll
+    text-wrap: nowrap
+
+    border-radius: 0.5rem
+
+  .app-downloads
+    display: flex
+    flex-direction: row
+    gap: 0.5rem
+    align-items: center
+    justify-content: center
+
+  .app-downloads svg
+    height: 1.25rem
+
 </style>

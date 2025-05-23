@@ -23,43 +23,30 @@
   </div>
 </template>
 
-<style scoped>
-  .navigationButton {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 1.25rem;
-    transition: 0.2s ease-in-out;
-    padding: 0;
-  }
+<style scoped lang="sass">
+  .navigationButton
+    width: 3rem
+    height: 3rem
+    border-radius: 1.25rem
+    transition: 0.2s ease-in-out
+    padding: 0
 
-  .navigationButton > ::v-deep(svg) {
-    height: 1.25rem;
-    width: 1.25rem;
-  }
+  .navigationButton > ::v-deep(svg)
+    height: 1.25rem
+    width: 1.25rem
 
   /* Tooltip Styling */
-  .toolTip {
-    display: none;
-    position: absolute;
-    background: var(--background-color);
-    padding: 0.5rem 0.75rem;
-    border-radius: 1rem;
-    white-space: nowrap;
-    z-index: 25;
-    animation: slideIn 0.2s ease-in-out forwards;
-  }
+  .toolTip
+    display: none
+    position: absolute
+    background: var(--background-color)
+    padding: 0.5rem 0.75rem
+    border-radius: 1rem
+    white-space: nowrap
+    z-index: 25
+    animation: slideIn 0.2s ease-in-out forwards
 
   /* Show tooltip on hover */
-  .navWrapper:hover .toolTip {
-    display: flex;
-  }
-
-  @keyframes slideIn {
-    0% {
-      transform: scale(0.8) translateY(-50%);
-    }
-    100% {
-      transform: scale(1) translateY(-100%);
-    }
-  }
+  .navWrapper:hover .toolTip
+    display: flex
 </style>

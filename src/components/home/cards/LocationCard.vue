@@ -13,8 +13,7 @@
   </card>
 </template>
 
-<style scoped>
-  .locationImage {
-    border-radius: 0.25rem;
-  }
+<style scoped lang="sass">
+  .locationImage
+    border-radius: 0.25rem
 </style>

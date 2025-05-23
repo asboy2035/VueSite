@@ -18,23 +18,20 @@
   </h-stack>
 </template>
 
-<style scoped>
-  .icon {
-    width: 2.5rem;
-    height: 2.5rem;
-    padding: 0.1rem;
-    background: var(--foreground-color);
-    align-items: center;
-    justify-content: center;
-    border-radius: 1rem;
-  }
+<style scoped lang="sass">
+  .icon
+    width: 2.5rem
+    height: 2.5rem
+    padding: 0.1rem
+    background: var(--foreground-color)
+    align-items: center
+    justify-content: center
+    border-radius: 1rem
 
-  .icon > ::v-deep(svg) {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
+  .icon > ::v-deep(svg)
+    width: 1.5rem
+    height: 1.5rem
 
-  .sitePicker {
-    padding-right: 1rem;
-  }
+  .sitePicker
+    padding-right: 1rem
 </style>

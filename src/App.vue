@@ -85,24 +85,22 @@
   })
 </script>
 
-<style scoped>
-  .progBlurContainer {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 9;
-    pointer-events: none;
-  }
+<style scoped lang="sass">
+  .progBlurContainer
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 9
+    pointer-events: none
 
-  .progBlur {
-    --blur-height: 5rem;
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: var(--blur-height);
-    z-index: 10;
-    transform: translateY(calc(100vh - var(--blur-height)));
-  }
+  .progBlur
+    --blur-height: 7rem
+    position: absolute
+    left: 0
+    right: 0
+    height: var(--blur-height)
+    z-index: 10
+    transform: translateY(calc(100vh - var(--blur-height)))
 </style>

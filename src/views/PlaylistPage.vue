@@ -141,14 +141,11 @@
   </div>
 </template>
 
-<style scoped>
-  .playlistArt {
-      width: 14rem;
-  }
+<style scoped lang="sass">
+  .playlistArt
+    width: 14rem
 
-  @media (max-width: 35rem) {
-    .playlistArt {
-      width: 100%;
-    }
-  }
+  @media (max-width: 35rem)
+    .playlistArt
+      width: 100%
 </style>

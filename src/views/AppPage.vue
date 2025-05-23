@@ -103,12 +103,11 @@
   </div>
 </template>
 
-<style scoped>
-  .brewCmd {
-    font-family: "JetBrains Mono", monospace;
-    opacity: 0.7;
-    user-select: all;
-    -webkit-user-select: all;
-    scale: 0.9;
-  }
+<style scoped lang="sass">
+  .brewCmd
+    font-family: "JetBrains Mono", monospace
+    opacity: 0.7
+    user-select: all
+    -webkit-user-select: all
+    scale: 0.9
 </style>

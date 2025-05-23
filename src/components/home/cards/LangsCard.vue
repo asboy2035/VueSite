@@ -36,9 +36,8 @@
   </card>
 </template>
 
-<style scoped>
-  .langCard > ::v-deep(svg) {
-    width: 3rem;
-    height: 3rem;
-  }
+<style scoped lang="sass">
+  .langCard > ::v-deep(svg)
+    width: 3rem
+    height: 3rem
 </style>

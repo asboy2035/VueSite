@@ -1,3 +1,12 @@
+<script setup>
+  import Card from "@/components/layout/Card.vue"
+  import VStack from "@/components/layout/VStack.vue"
+  import HStack from "@/components/layout/HStack.vue"
+  import InteriorItem from "@/components/layout/InteriorItem.vue"
+
+  defineProps(['data'])
+</script>
+
 <template>
   <card style="width: 350px; height: fit-content; padding: 0; border-radius: 1.5rem" >
     <div class="bannerContainer">
@@ -43,46 +52,30 @@
   </card>
 </template>
 
-<script setup>
-import Card from "@/components/layout/Card.vue";
-import VStack from "@/components/layout/VStack.vue";
-import HStack from "@/components/layout/HStack.vue";
-import InteriorItem from "@/components/layout/InteriorItem.vue";
-import Spacer from "@/components/utils/Spacer.vue";
+<style scoped lang="sass">
+  .interest
+    color: white
+    padding: 0.25rem
+    border-radius: 0.5rem
+    font-size: 0.75rem
+    display: flex
+    justify-content: center
 
-const props = defineProps(['data'])
-</script>
+  .bannerContainer, .bannerContainer > img
+    height: 8rem
+    width: 100%
+    background-size: cover
+    border-radius: 2rem
 
-<style scoped>
-  .interest {
-    color: white;
-    padding: 0.25rem;
-    border-radius: 0.5rem;
-    font-size: 0.75rem;
-    display: flex;
-    justify-content: center;
-  }
+  ::v-deep(.interior)
+    --interior-radius: 1.25re
 
-  .bannerContainer, .bannerContainer > img {
-    height: 8rem;
-    width: 100%;
-    background-size: cover;
-    border-radius: 2rem;
-  }
+  ::v-deep(.card)
+    padding: 0
 
-  ::v-deep(.interior) {
-    --interior-radius: 1.25rem
-  }
+  ::v-deep(.card::before)
+    display: none !important
 
-  ::v-deep(.card) {
-    padding: 0;
-  }
-
-  ::v-deep(.card::before) {
-    display: none !important;
-  }
-
-  ::v-deep(.card::after), ::v-deep(.interior::after) {
-    box-shadow: none !important;
-  }
+  ::v-deep(.card::after), ::v-deep(.interior::after)
+    box-shadow: none !important
 </style>

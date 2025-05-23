@@ -193,176 +193,118 @@
   </v-stack>
 </template>
 
-<style scoped>
-  .navBar {
-    position: sticky;
-    flex-wrap: wrap;
-    bottom: 1rem;
-    max-width: calc(100vw - 2rem);
-    z-index: 19;
-    align-items: center;
-  }
+<style scoped lang="sass">
+  .navBar
+    position: sticky
+    flex-wrap: wrap
+    bottom: 1rem
+    max-width: calc(100vw - 2rem)
+    z-index: 19
+    align-items: center
 
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0.75rem;
-    background: var(--foreground-color);
-    box-shadow: 0.5rem 0.5rem 3rem rgba(28, 28, 28, 0.2);
-    padding: 0.5rem;
-    border-radius: 1.75rem;
-    z-index: 20;
-    backdrop-filter: blur(2rem);
-    transition: width 0.2s ease;
-  }
+  header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    gap: 0.75rem
+    background: var(--foreground-color)
+    box-shadow: 0.5rem 0.5rem 3rem rgba(28, 28, 28, 0.2)
+    padding: 0.5rem
+    border-radius: 1.75rem
+    z-index: 20
+    backdrop-filter: blur(2rem)
+    transition: width 0.2s ease
 
-  .profile h1 {
-    margin: 0;
-  }
+  .profile h1
+    margin: 0
 
-  .avatar {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 1.25rem;
-  }
+  .avatar
+    width: 3rem
+    height: 3rem
+    border-radius: 1.25rem
 
-  .createBtn {
-    height: fit-content;
-    border-radius: 2rem;
-    z-index: 20;
-  }
-  .createBtn::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    padding: 0.5rem;
+  .createBtn
+    height: fit-content
+    border-radius: 2rem
+    z-index: 20
 
-    border-radius: 50%;
-    background: var(--swirly-01);
-    z-index: -1;
-    filter: blur(1rem);
-    transition: opacity 0.4s ease;
-  }
+  .createBtn::before
+    content: ""
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    padding: 0.5rem
 
-  #avatarButton {
-    display: block;
-  }
+    border-radius: 50%
+    background: var(--swirly-01)
+    z-index: -1
+    filter: blur(1rem)
+    transition: opacity 0.4s ease
 
-  #homeButton {
-    display: none;
-  }
+  #avatarButton
+    display: block
 
-  #homeButtonContainer:hover #avatarButton {
-    display: none;
-  }
+  #homeButton
+    display: none
 
-  #homeButtonContainer:hover #homeButton {
-    display: flex;
-  }
-  #homeButton, #avatarButton {
-    animation: blurIn 0.3s ease forwards;
-  }
-  @keyframes blurIn {
-    0% {
-      opacity: 0.5;
-      filter: blur(0.5rem);
-    }
-    100% {
-      opacity: 1;
-      filter: none;
-    }
-  }
+  #homeButtonContainer:hover #avatarButton
+    display: none
 
-  .spinIn {
-    animation: spinIn 0.3s ease forwards;
-  }
+  #homeButtonContainer:hover #homeButton
+    display: flex
 
-  @keyframes spinIn {
-    0% {
-      transform: rotate(90deg);
-    }
+  #homeButton, #avatarButton
+    animation: blurIn 0.3s ease forwards
 
-    100%{
-      transform: none;
-    }
-  }
+  .launcherImage
+    width: 2rem
+    height: 2rem
 
-  .growIn {
-    animation: growIn 0.2s ease forwards;
-  }
+  #mobileButton
+    display: none
 
-  @keyframes growIn {
-    0% {
-      transform: scale(0);
-    }
+  #mobileNav, #siteSwitcher
+    animation: slideBottom 0.3s ease forwards
 
-    100% {
-      transform: scale(1);
-    }
-  }
+  @keyframes slideBottom
+    0%
+      transform: translateY(100vh)
 
-  .launcherImage {
-    width: 2rem;
-    height: 2rem;
-  }
 
-  #mobileButton {
-    display: none;
-  }
+    100%
+      transform: none
 
-  #mobileNav, #siteSwitcher {
-    animation: slideBottom 0.3s ease forwards;
-  }
+  @media (max-width: 35rem)
+    #mobileButton
+      display: flex
+      border-radius: 2rem
 
-  @keyframes slideBottom {
-    0% {
-      transform: translateY(100vh);
-    }
+    .desktopLinks
+      display: none
 
-    100% {
-      transform: none;
-    }
-  }
+    .name
+      display: none
 
-  @media (max-width: 35rem) {
-    #mobileButton {
-      display: flex;
-      border-radius: 2rem;
-    }
-    .desktopLinks {
-      display: none;
-    }
-    .name {
-      display: none;
-    }
-  }
+  #siteSwitcherButton
+    cursor: pointer
 
-  #siteSwitcherButton {
-    cursor: pointer;
-  }
+  #siteSwitcherButton > svg
+    transition: transform 0.2s ease
 
-  #siteSwitcherButton > svg {
-    transition: transform 0.2s ease;
-  }
-  #siteSwitcherButton.active > svg {
-    transform: rotate(-90deg);
-  }
+  #siteSwitcherButton.active > svg
+    transform: rotate(-90deg)
 
-  #siteSwitcher {
-    z-index: 20;
-  }
+  #siteSwitcher
+    z-index: 20
 
-  .siteSwitchBlur {
-    --siteSwitchBlurHeight: 32rem;
-    position: fixed !important;
-    right: 0;
-    left: 0;
-    transform: translateY(calc(100vh - var(--siteSwitchBlurHeight)));
-    height: var(--siteSwitchBlurHeight);
-    z-index: 19;
-  }
+  .siteSwitchBlur
+    --siteSwitchBlurHeight: 32rem
+    position: fixed !important
+    right: 0
+    left: 0
+    transform: translateY(calc(100vh - var(--siteSwitchBlurHeight)))
+    height: var(--siteSwitchBlurHeight)
+    z-index: 19
 </style>

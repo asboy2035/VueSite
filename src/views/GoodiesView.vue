@@ -101,15 +101,13 @@
   </div>
 </template>
 
-<style scoped>
-  .cursorAsset {
-    background: var(--foreground-color);
-    border-radius: 1rem;
-    padding: 0.5rem;
-  }
+<style scoped lang="sass">
+  .cursorAsset
+    background: var(--foreground-color)
+    border-radius: 1rem
+    padding: 0.5rem
 
-  .cursorAsset > img {
-    height: 3rem;
-    width: 3rem;
-  }
+  .cursorAsset > img
+    height: 3rem
+    width: 3rem
 </style>

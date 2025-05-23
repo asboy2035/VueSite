@@ -21,61 +21,53 @@
   </div>
 </template>
 
-<style scoped>
-  .notificationContainer {
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 1rem;
-    left: 0;
-    width: 100vw;
-    z-index: 6;
-    height: fit-content;
+<style scoped lang="sass">
+  .notificationContainer
+    position: fixed
+    display: flex
+    justify-content: center
+    align-items: center
+    top: 1rem
+    left: 0
+    width: 100vw
+    z-index: 6
+    height: fit-content
 
-    background: transparent;
-    border-radius: 0;
-  }
+    background: transparent
+    border-radius: 0
 
-  .bannerNotification {
-    padding: 0.75rem;
-    width: fit-content;
-    max-width: calc(100vw - 2rem);
-    transform: translateY(calc(-100% - 1rem));
-    animation: notification 3s ease forwards;
-    animation-delay: 1s;
-    --card-radius: 1.5rem;
-  }
+  .bannerNotification
+    padding: 0.75rem
+    width: fit-content
+    max-width: calc(100vw - 2rem)
+    transform: translateY(calc(-100% - 1rem))
+    animation: notification 3s ease forwards
+    animation-delay: 1s
+    --card-radius: 1.5rem
 
-  .bannerNotification:hover {
-    animation: none;
-    transform: translateY(0%);
-  }
+  .bannerNotification:hover
+    animation: none
+    transform: translateY(0%)
 
-  @keyframes notification {
-    0% {
-      transform: translateY(calc(-100% - 1rem));
-      scale: 0.9;
-      filter: blur(1rem);
-    }
+  @keyframes notification
+    0%
+      transform: translateY(calc(-100% - 1rem))
+      scale: 0.9
+      filter: blur(1rem)
 
-    15% {
-      transform: translateY(0%);
-      scale: 1;
-      filter: none;
-    }
+    15%
+      transform: translateY(0%)
+      scale: 1
+      filter: none
 
-    85% {
-      transform: translateY(0%);
-      scale: 1;
-      filter: none;
-    }
+    85%
+      transform: translateY(0%)
+      scale: 1
+      filter: none
 
-    99% {
-      transform: translateY(calc(-100% - 1rem));
-      scale: 0.9;
-      filter: blur(1rem);
-      display: none;
-    }
-  }
+    99%
+      transform: translateY(calc(-100% - 1rem))
+      scale: 0.9
+      filter: blur(1rem)
+      display: none
 </style>

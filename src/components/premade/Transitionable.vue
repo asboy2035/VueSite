@@ -20,14 +20,12 @@
    </div>
 </template>
 
-<style scoped>
-  .transitionable {
-    display: flex;
-    transition: opacity 1.2s ease;
-    opacity: 1;
-  }
+<style scoped lang="sass">
+  .transitionable
+    display: flex
+    transition: opacity 1.2s ease
+    opacity: 1
 
-  .transitionable.active {
-    opacity: 0;
-  }
+  .transitionable.active
+    opacity: 0
 </style>
