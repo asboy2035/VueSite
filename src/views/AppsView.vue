@@ -154,5 +154,4 @@
 
   .app-downloads svg
     height: 1.25rem
-
 </style>
