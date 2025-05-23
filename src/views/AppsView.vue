@@ -95,7 +95,13 @@
     </v-stack>
 
     <p class="light">
-      How to install PWAs (iOS): Click/press "Go" and then "Share" then "Add to Home Screen".
+      <a
+        href="https://guides.asboy2035.com/misc/web/pwaInstall"
+        target="_blank"
+        class="prominentLink"
+      >
+        PWA Installation
+      </a>
     </p>
 
     <bottom-footer />
