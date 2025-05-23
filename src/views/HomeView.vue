@@ -11,7 +11,7 @@
   import { useHead } from "@vueuse/head"
 
   useHead({
-    title: 'ash (asboy2035)',
+    title: 'ash (asboy2035) ∙ Portfolio',
     meta: [
       { name: 'description', content: 'My (new) site :)' },
       { property: 'og:title', content: "ash's Site" },
