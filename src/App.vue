@@ -83,6 +83,9 @@
       }, 200)
     })
   })
+
+  const loader = document.getElementById('loading-screen')
+  loader.classList.add('hidden')
 </script>
 
 <style scoped lang="sass">

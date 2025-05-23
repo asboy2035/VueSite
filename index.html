@@ -55,18 +55,7 @@
       </div>
     </div>
 
-    <script type="module">
-      import '/src/main.ts'
-
-      window.addEventListener('DOMContentLoaded', () => {
-        const checkAppReady = setInterval(() => {
-          if (document.getElementById('app')?.children.length) {
-            document.getElementById('loading-screen')?.remove()
-            clearInterval(checkAppReady);
-          }
-        }, 100)
-      })
-    </script>
+    <script type="module" src="/src/main.js"></script>
 
     <div id="app"></div>
   </body>
