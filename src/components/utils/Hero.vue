@@ -14,7 +14,7 @@
   <div class="hero-v2">
     <dynamic-image class="heroResizableImage" :src="image" :alt="imageAlt" />
 
-    <div class="heroText spaced">
+    <div class="heroText">
       <slot />
     </div>
   </div>
@@ -38,10 +38,12 @@
     height: fit-content
 
   ::v-deep(h1)
-    font-family: 'Instrument Serif', serif
+    font-family: "DM Serif Display", serif
     font-style: italic
     color: white
+    font-weight: 200
     font-size: 5rem
+    margin: 0 0.25rem
 
   ::v-deep(h1), ::v-deep(h2), ::v-deep(p)
     color: white

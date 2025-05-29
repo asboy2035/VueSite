@@ -5,6 +5,8 @@
 </template>
 
 <style scoped lang="sass">
+  @use "@/styles/colors"
+
   .card
     --card-radius: 2.5rem
 
@@ -15,7 +17,7 @@
     flex-grow: 1
 
     border-radius: var(--card-radius)
-    background: var(--foreground-color)
+    background: colors.$foreground-color
     backdrop-filter: blur(1rem)
     z-index: 2
 
@@ -34,7 +36,7 @@
 
     opacity: 0.2
     border-radius: var(--card-radius)
-    background: radial-gradient(circle at top left, var(--swirly-01), var(--swirly-02), var(--swirly-01))
+    background: radial-gradient(circle at top left, colors.$swirly-01, colors.$swirly-02, colors.$swirly-01)
     background-size: 200% 200%
     z-index: -1
     filter: blur(1rem)
@@ -52,8 +54,8 @@
     right: 0
     left: 0
 
-    border: 0.1rem solid var(--text-color)
-    box-shadow: inset 0 0.5rem 0.5rem var(--text-color)
+    border: 0.1rem solid colors.$text-color
+    box-shadow: inset 0 0.5rem 0.5rem colors.$text-color
     border-radius: var(--card-radius)
     opacity: 0.1
     pointer-events: none

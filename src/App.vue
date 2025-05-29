@@ -29,7 +29,7 @@
     <p>Access this site at asboy2035.com for a cleaner link!</p>
     <spacer />
 
-    <h-stack class="autospace fullWidth">
+    <h-stack class="autoSpace fullWidth">
       <button @click="showDomainTip = false">
         Later
       </button>

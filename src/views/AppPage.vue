@@ -68,7 +68,7 @@
       <h2>{{ app.shortDescription }}</h2>
     </hero>
 
-    <card v-if="app.appLinks?.length" class="hStack autospace centered">
+    <card v-if="app.appLinks?.length" class="hStack autoSpace centered">
       <h-stack>
         <a
           v-for="(link, index) in app.appLinks"

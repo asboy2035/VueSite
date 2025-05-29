@@ -33,7 +33,7 @@
 
     <!-- About -->
     <grid class="spaced">
-      <card class="autospace">
+      <card class="autoSpace">
         <v-stack class="edgeToEdge">
           <description />
           <spacer />

@@ -5,7 +5,7 @@
 </script>
 
 <template>
-  <card class="autospace">
+  <card class="autoSpace">
     <h2>Bordeaux, FR</h2>
     <interior-item>
       <dynamic-image class="locationImage" src="/images/Bordeaux.webp" alt="Place de la Bourse, Bordeaux, France" />

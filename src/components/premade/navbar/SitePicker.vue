@@ -21,7 +21,7 @@
 <template>
   <card class="sitePicker">
     <v-stack>
-      <h-stack class="autospace fullWidth">
+      <h-stack class="autoSpace fullWidth">
         <h2>Sites</h2>
 <!--        Insert close button here -->
         <slot />
