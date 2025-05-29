@@ -89,21 +89,22 @@
 </script>
 
 <style scoped lang="sass">
+  $blurHeight: 7rem
+
   .progBlurContainer
     position: fixed
     top: 0
-    bottom: 0
+    bottom: 0 !important
     left: 0
     right: 0
     z-index: 9
     pointer-events: none
 
   .progBlur
-    --blur-height: 7rem
-    position: absolute
     left: 0
     right: 0
-    height: var(--blur-height)
+    bottom: 0
+    height: $blurHeight
     z-index: 10
-    transform: translateY(calc(100vh - var(--blur-height)))
+    margin-top: calc(100dvh - $blurHeight)
 </style>
