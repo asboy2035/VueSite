@@ -106,5 +106,6 @@
     bottom: 0
     height: $blurHeight
     z-index: 10
+    margin-top: calc(100vh - $blurHeight)
     margin-top: calc(100dvh - $blurHeight)
 </style>
