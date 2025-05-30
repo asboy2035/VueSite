@@ -8,7 +8,7 @@
   .grid
     display: grid
     width: 100%
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr))
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr))
     align-items: stretch
 
   .grid > *

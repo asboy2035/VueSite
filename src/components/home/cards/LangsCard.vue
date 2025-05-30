@@ -30,7 +30,7 @@
 
       <interior-item class="centered langCard">
         <Icon icon="iconoir:apple-swift" width="24" height="24" />
-        <p>Swift (Learning)</p>
+        <p>Swift</p>
       </interior-item>
     </grid>
   </card>
