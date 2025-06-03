@@ -3,11 +3,16 @@
   import Card from "@/components/layout/Card.vue"
   import Grid from "@/components/layout/Grid.vue"
   import LinkItem from "@/components/links/LinkItem.vue"
+  import CardTitle from "@/components/utils/CardTitle.vue";
 </script>
 
 <template>
   <card class="spaced">
-    <h2>My Socials</h2>
+    <card-title
+      title="My Socials"
+      icon="solar:share-line-duotone"
+    />
+
     <p>My socials and contact methods :3</p>
     <spacer />
 

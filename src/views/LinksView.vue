@@ -28,7 +28,7 @@
   <div class="contentView">
     <hero image="/images/Links.jpg">
       <h1>Links</h1>
-      <p>My socials, contacts, and more.</p>
+      <h2>My socials, contacts, and more.</h2>
     </hero>
 
     <!-- About -->

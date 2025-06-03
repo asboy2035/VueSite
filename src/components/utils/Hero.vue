@@ -1,8 +1,9 @@
 <script>
   import DynamicImage from "@/components/utils/DynamicImage.vue"
+  import {ProgressiveBlur} from "vue-progressive-blur"
 
   export default {
-    components: {DynamicImage},
+    components: {DynamicImage, ProgressiveBlur},
     props: {
       image: String,
       imageAlt: String ?? "Image"
@@ -14,8 +15,15 @@
   <div class="hero-v2">
     <dynamic-image class="heroResizableImage" :src="image" :alt="imageAlt" />
 
-    <div class="heroText">
-      <slot />
+    <div class="heroInset">
+      <div class="heroText">
+        <slot />
+      </div>
+      <progressive-blur
+        class="heroBlur"
+        :blur="64"
+        :border-radius="32"
+      />
     </div>
   </div>
 </template>
@@ -30,12 +38,18 @@
     height: 75vh
     max-height: 80vw
     width: 100%
+    overflow: hidden
 
-  .heroText
+  .heroInset
     display: flex
     align-items: flex-start
     margin: 1.5rem
     height: fit-content
+    max-height: calc(100% - 2rem)
+
+  .heroText
+    z-index: 3
+    align-items: flex-start
 
   ::v-deep(h1)
     font-family: "DM Serif Display", serif
@@ -59,13 +73,25 @@
     border-radius: 2rem
     width: 100%
     height: 100%
-    z-index: -1
+    z-index: 1
     opacity: 0.8
+
+  .heroBlur
+    display: flex
+    position: absolute
+    z-index: 2
+    flex-grow: 1
+    width: 100%
+    max-height: 70%
+    margin-top: 30%
 
   @media (max-width: 35rem)
     .hero
       height: fit-content
       align-items: flex-start
+
+    .heroBlur
+      max-height: calc(100% - 2rem)
 
     .hero-v2
       max-height: 75vh

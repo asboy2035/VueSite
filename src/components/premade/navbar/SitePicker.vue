@@ -46,7 +46,7 @@
         <h-stack>
           <a href="https://asboy2035.com">
             <button :disabled="isMain">
-              <Icon icon="solar:planet-bold-duotone" width="24" height="24" />
+              <Icon icon="solar:planet-bold-duotone" />
               Main
             </button>
           </a>

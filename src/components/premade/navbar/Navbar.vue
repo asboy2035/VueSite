@@ -11,6 +11,7 @@
   import SitePicker from "@/components/premade/navbar/SitePicker.vue"
   import { Icon } from '@iconify/vue'
   import {ProgressiveBlur} from "vue-progressive-blur"
+  import CardTitle from "@/components/utils/CardTitle.vue";
 
   const showSwitcher = ref(false)
 
@@ -75,7 +76,11 @@
     <fullscreen-cover v-if="showSwitcher">
       <v-stack>
         <card class="quickContainer">
-          <h2>Apps</h2>
+          <card-title
+            title="Apps"
+            icon="solar:widget-2-line-duotone"
+          />
+
           <h-stack class="tight">
             <interior-item v-for="app in apps" :key="app.name">
               <a :href="app.link" target="_blank">
@@ -92,7 +97,11 @@
         </card>
 
         <card class="quickContainer">
-          <h2>Create...</h2>
+          <card-title
+            title="Create..."
+            icon="solar:pen-new-square-line-duotone"
+          />
+
           <h-stack class="tight">
             <interior-item v-for="creator in creators" :key="creator.name">
               <a :href="creator.link">
@@ -194,6 +203,8 @@
 </template>
 
 <style scoped lang="sass">
+  @use "@/styles/colors"
+
   .navBar
     position: sticky
     flex-wrap: wrap
@@ -207,7 +218,7 @@
     justify-content: space-between
     align-items: center
     gap: 0.75rem
-    background: var(--foreground-color)
+    background: colors.$foreground-color
     box-shadow: 0.5rem 0.5rem 3rem rgba(28, 28, 28, 0.2)
     padding: 0.5rem
     border-radius: 1.75rem
@@ -238,7 +249,7 @@
     padding: 0.5rem
 
     border-radius: 50%
-    background: var(--swirly-01)
+    background: colors.$accent-color
     z-index: -1
     filter: blur(1rem)
     transition: opacity 0.4s ease
@@ -272,7 +283,6 @@
     0%
       transform: translateY(100vh)
 
-
     100%
       transform: none
 
@@ -301,10 +311,16 @@
 
   .siteSwitchBlur
     --siteSwitchBlurHeight: 32rem
+
     position: fixed !important
     right: 0
     left: 0
     transform: translateY(calc(100vh - var(--siteSwitchBlurHeight)))
     height: var(--siteSwitchBlurHeight)
     z-index: 19
+
+  #mobileButton, .createBtn
+    svg
+      width: 1.25rem
+      height: 1.25rem
 </style>

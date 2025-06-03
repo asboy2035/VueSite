@@ -19,11 +19,13 @@
 </template>
 
 <style scoped lang="sass">
+  @use "@/styles/colors"
+
   .icon
     width: 2.5rem
     height: 2.5rem
     padding: 0.1rem
-    background: var(--foreground-color)
+    background: colors.$foreground-color
     align-items: center
     justify-content: center
     border-radius: 1rem

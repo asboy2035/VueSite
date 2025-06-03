@@ -20,6 +20,8 @@
 </template>
 
 <style scoped lang="sass">
+  @use "@/styles/colors"
+
   .transitionElement
     position: fixed
     top: 0
@@ -27,7 +29,7 @@
     left: 0
     right: 0
 
-    background: var(--foreground-color)
+    background: colors.$foreground-color
     backdrop-filter: blur(3rem)
     border-radius: 0
     z-index: 2
@@ -49,7 +51,7 @@
     z-index: 6
 
     transform: translateX(-100%)
-    background: var(--accent-color)
+    background: colors.$accent-color
 
   .progressBar.active
     animation: progressActive 1s ease

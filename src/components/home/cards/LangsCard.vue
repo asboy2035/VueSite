@@ -4,11 +4,16 @@
   import Grid from "@/components/layout/Grid.vue"
   import Spacer from "@/components/utils/Spacer.vue"
   import {Icon} from "@iconify/vue"
+  import CardTitle from "@/components/utils/CardTitle.vue"
 </script>
 
 <template>
   <card class="spaced">
-    <h2>Languages</h2>
+    <card-title
+      title="Languages"
+      icon="solar:earth-line-duotone"
+    />
+
     <p>I speak English, French, and a bit of Spanish :)</p>
     <spacer />
 

@@ -5,6 +5,8 @@
 </template>
 
 <style scoped lang="sass">
+  @use "@/styles/colors"
+
   a > .interior
     width: 100%
 
@@ -12,7 +14,7 @@
     position: relative
     --interior-radius: 1.25rem
 
-    background: var(--foreground-color)
+    background: colors.$foreground-color
     border-radius: var(--interior-radius)
     padding: 0.75rem
     transition: 0.2s ease
@@ -25,8 +27,8 @@
     right: 0
     left: 0
 
-    border: 0.1rem solid var(--text-color)
-    box-shadow: 0 0.5rem 0.5rem var(--text-color)
+    border: 0.1rem solid colors.$text-color
+    box-shadow: 0 0.5rem 0.5rem colors.$text-color
     border-radius: var(--interior-radius)
     opacity: 0.05
     pointer-events: none
@@ -36,13 +38,13 @@
     transform: translateY(-0.5rem)
 
   .interior:hover::after
-    box-shadow: 0 1rem 0.75rem var(--text-color)
+    box-shadow: 0 1rem 0.75rem colors.$text-color
 
   .interior:active
     transform: translateY(-0.15rem)
 
   .interior:active::after
-    box-shadow: 0 0.35rem 0.55rem var(--text-color)
+    box-shadow: 0 0.35rem 0.55rem colors.$text-color
 
   ::v-deep(svg)
     width: 3rem

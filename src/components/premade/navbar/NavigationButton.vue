@@ -24,6 +24,8 @@
 </template>
 
 <style scoped lang="sass">
+  @use "@/styles/colors"
+
   .navigationButton
     width: 3rem
     height: 3rem
@@ -39,7 +41,7 @@
   .toolTip
     display: none
     position: absolute
-    background: var(--background-color)
+    background: colors.$background-color
     padding: 0.5rem 0.75rem
     border-radius: 1rem
     white-space: nowrap

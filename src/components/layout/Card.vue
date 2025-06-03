@@ -59,6 +59,10 @@
     border-radius: var(--card-radius)
     opacity: 0.1
     pointer-events: none
+    transition: opacity 0.4s ease
+
+  .card:hover::after
+    opacity: 0.15
 
   @media (max-width: 35rem)
     .card

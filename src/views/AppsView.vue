@@ -20,7 +20,7 @@
       { name: "description", content: "My web/Apple apps." },
       { property: "og:title", content: "ash's Apps" },
       { property: "og:description", content: "My web/Apple apps." },
-      { property: "og:image", content: "/images/Apps.png"}
+      { property: "og:image", content: "/images/Apps.jpg"}
     ]
   })
 
@@ -54,9 +54,9 @@
 
 <template>
   <div class="contentView">
-    <hero image="/images/Apps.png" image-alt="Apps Header Image">
-      <h1>My Apps</h1>
-      <h2>I make web/Apple apps.</h2>
+    <hero image="/images/Apps.jpg" image-alt="Apps Header Image">
+      <h1>Apps</h1>
+      <h2>My web/Apple apps.</h2>
       <spacer />
 
       <a href="https://github.com/asboy2035?tab=repositories">
@@ -110,6 +110,8 @@
 </template>
 
 <style scoped lang="sass">
+  @use "@/styles/colors"
+
   #appsContainer
     width: 100%
 
@@ -123,7 +125,7 @@
     padding: 0.5rem 0.75rem
     align-items: center
 
-    background: var(--foreground-color)
+    background: colors.$foreground-color
     border-radius: 1rem
 
   .app-card-v2 ::v-deep(svg)

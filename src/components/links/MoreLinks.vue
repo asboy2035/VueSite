@@ -2,11 +2,16 @@
   import Card from "@/components/layout/Card.vue"
   import HStack from "@/components/layout/HStack.vue"
   import {Icon} from "@iconify/vue"
+  import CardTitle from "@/components/utils/CardTitle.vue";
 </script>
 
 <template>
   <card class="spaced">
-    <h2>More Links</h2>
+    <card-title
+      title="More Links"
+      icon="solar:menu-dots-line-duotone"
+    />
+
     <p>Other stuff</p>
 
     <h-stack>

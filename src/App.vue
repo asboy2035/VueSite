@@ -90,6 +90,8 @@
 
 <style scoped lang="sass">
   $blurHeight: 7rem
+  $blurTop: calc(100vh - $blurHeight)
+  $blurTop: calc(100dvh - $blurHeight)
 
   .progBlurContainer
     position: fixed
@@ -106,6 +108,5 @@
     bottom: 0
     height: $blurHeight
     z-index: 10
-    margin-top: calc(100vh - $blurHeight)
-    margin-top: calc(100dvh - $blurHeight)
+    margin-top: $blurTop
 </style>

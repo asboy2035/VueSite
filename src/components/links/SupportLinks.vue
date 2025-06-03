@@ -10,7 +10,7 @@
       <link-item
         name="Email"
         link="mailto:as_supp@icloud.com"
-        icon="iconoir:mail-solid"
+        icon="solar:plain-bold"
       />
 
       <link-item

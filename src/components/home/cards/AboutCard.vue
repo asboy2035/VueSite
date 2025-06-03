@@ -43,8 +43,5 @@
         </a>
       </h-stack>
     </v-stack>
-
-    <!-- Heart <3 -->
-    <Icon icon="solar:heart-bold-duotone" width="24" height="24" />
   </card>
 </template>

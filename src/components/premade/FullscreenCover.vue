@@ -7,6 +7,8 @@
 </template>
 
 <style scoped lang="sass">
+  @use "@/styles/colors"
+
   .fullScreenCover
     position: fixed
     display: flex
@@ -19,7 +21,7 @@
     z-index: 5
 
     opacity: 0
-    background: var(--foreground-color)
+    background: colors.$foreground-color
     backdrop-filter: blur(2rem)
     border-radius: 0
     animation: opacity 0.2s ease forwards
