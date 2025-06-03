@@ -63,12 +63,10 @@
   </card>
 </template>
 
-<style>
-  .sitePicker {
-    max-width: fit-content;
-  }
+<style lang="sass">
+  .sitePicker
+    max-width: fit-content
 
-  .sitePicker.fullWidth {
-    max-width: 100%;
-  }
+  .sitePicker.fullWidth
+    max-width: 100%
 </style>
