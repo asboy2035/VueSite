@@ -52,10 +52,10 @@
     align-items: flex-start
 
   ::v-deep(h1)
-    font-family: "DM Serif Display", serif
+    font-family: "LT Remark", serif
     font-style: italic
     color: white
-    font-weight: 200
+    font-weight: 500
     font-size: 5rem
     margin: 0 0.25rem
 

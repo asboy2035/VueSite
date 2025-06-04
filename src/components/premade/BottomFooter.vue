@@ -8,7 +8,7 @@
   <footer class="fullWidth">
     <card class="spaced">
       <card-title
-        title="You're reached the end."
+        title="You've reached the end."
         icon="solar:heart-line-duotone"
       />
 

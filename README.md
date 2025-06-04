@@ -1,15 +1,22 @@
-# Hi :3
-**I'm ash.**
+# hai haiii ✨
+**i'm ash!** – web designer, shortcut hacker, and macOS app enjoyer 🍎✨
+#### [say hi to my site](https://asboy2035.com)
 
-I do random stuff, mainly web design and shortcutting, as well as the occasional random Mac app for some specific purpose.
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=asboy2035&theme=tokyonight&layout=compact&hide_border=true" alt="Top Langs" />
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=asboy2035&theme=dark)
+---
 
-### Pronouns, etc
-> **he/they** preferred, however anything works.
+## what i do
+- make cute, clean web stuff 🌐
+- automate *everything* with shortcuts ⚡
+- code quirky lil mac apps when i’m bored 🎯
 
-I don't mind nicknames as long as they're appropriate, such as:
-- ashie
-- asher
+---
+
+## pronouns & names
+**he/they** preferred — but honestly, call me whatever kind 💖
+
+nicknames i vibe with:
+- ashie  
+- asher  
 - ashy
-etc.
