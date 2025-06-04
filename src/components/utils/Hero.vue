@@ -29,6 +29,8 @@
 </template>
 
 <style scoped lang="sass">
+  @use "@/styles/fonts"
+
   .hero-v2
     display: flex
     position: relative
@@ -52,7 +54,7 @@
     align-items: flex-start
 
   ::v-deep(h1)
-    font-family: "LT Remark", serif
+    font-family: fonts.$prominent
     font-style: italic
     color: white
     font-weight: 500

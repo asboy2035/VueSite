@@ -16,7 +16,9 @@
       <div class="content spaced">
         <about-header />
         <grid class="spaced">
-          <card class="attention topZ">
+          <card class="attention topZ error">
+            <h1 class="bigError">404</h1>
+
             <card-title
               title="This page doesn't exist!"
               icon="solar:danger-triangle-line-duotone"
@@ -35,6 +37,17 @@
 </template>
 
 <style scoped lang="sass">
+  @use "@/styles/fonts"
+
   .topZ
     z-index: 10
+
+  .bigError
+    font-family: fonts.$prominent
+    font-size: 6rem
+    width: 100%
+    text-align: center
+
+  .error::before
+    background: red
 </style>
