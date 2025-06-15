@@ -83,7 +83,7 @@
                 <p>{{ asset.type }}</p>
               </div>
             </h-stack>
-            <a :href="cursor.downloadURL">
+            <a download :href="cursor.downloadURL">
               <button>
                 <Icon icon="iconoir:finder" width="24" height="24" />
                 Download
