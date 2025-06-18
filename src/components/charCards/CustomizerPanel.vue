@@ -55,7 +55,7 @@
             v-for="(tag, i) in localData.interests"
             :key="i"
             style="
-              background: var(--foreground-color);
+              background: var(--foregroundColor);
               padding: 0.3rem 0.6rem;
               border-radius: 2rem;
               cursor: pointer;"

@@ -21,7 +21,7 @@
     z-index: 5
 
     opacity: 0
-    background: colors.$foreground-color
+    background: colors.$foregroundColor
     backdrop-filter: blur(2rem)
     border-radius: 0
     animation: opacity 0.2s ease forwards

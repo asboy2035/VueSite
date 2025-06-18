@@ -11,7 +11,7 @@
     position: relative
     border-radius: 10rem
     border: rgba(76, 0, 130, 0.4) 0.1rem solid
-    background: colors.$foreground-color
+    background: colors.$foregroundColor
     color: white
     padding: 0.75rem
     animation: pulse 3s infinite ease-in-out

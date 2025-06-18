@@ -46,7 +46,7 @@
     left: 0
     right: 0
 
-    background: colors.$foreground-color
+    background: colors.$foregroundColor
     backdrop-filter: blur(3rem)
     border-radius: 0
     z-index: 2
@@ -66,7 +66,7 @@
     z-index: 7
 
     transform: translateX(-100%)
-    background: colors.$accent-color
+    background: colors.$accentColor
 
   .progressBar.active
     animation: progressActive 1s ease
@@ -79,7 +79,7 @@
     right: 0
     bottom: 0
 
-    background: colors.$accent-color
+    background: colors.$accentColor
     filter: blur(0.5rem)
     opacity: 0.6
 

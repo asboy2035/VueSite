@@ -41,7 +41,7 @@
   .toolTip
     display: none
     position: absolute
-    background: colors.$background-color
+    background: colors.$foregroundOpaque
     padding: 0.5rem 0.75rem
     border-radius: 1rem
     white-space: nowrap

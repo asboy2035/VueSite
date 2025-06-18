@@ -17,7 +17,7 @@
     flex-grow: 1
 
     border-radius: var(--card-radius)
-    background: colors.$foreground-color
+    background: colors.$foregroundColor
     backdrop-filter: blur(1rem)
     z-index: 2
 
@@ -36,7 +36,7 @@
 
     opacity: 0.2
     border-radius: var(--card-radius)
-    background: radial-gradient(circle at top left, colors.$swirly-01, colors.$swirly-02, colors.$swirly-01)
+    background: radial-gradient(circle at top left, colors.$swirly01, colors.$swirly02, colors.$swirly01)
     background-size: 200% 200%
     z-index: -1
     filter: blur(1rem)
@@ -54,8 +54,8 @@
     right: 0
     left: 0
 
-    border: 0.1rem solid colors.$text-color
-    box-shadow: inset 0 0.5rem 0.5rem colors.$text-color
+    border: 0.1rem solid colors.$textColor
+    box-shadow: inset 0 0.5rem 0.5rem colors.$textColor
     border-radius: var(--card-radius)
     opacity: 0.1
     pointer-events: none

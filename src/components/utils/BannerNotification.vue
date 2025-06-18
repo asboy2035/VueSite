@@ -37,17 +37,20 @@
     border-radius: 0
 
   .bannerNotification
-    padding: 0.75rem
+    padding: 1.25rem
     width: fit-content
     max-width: calc(100vw - 2rem)
     transform: translateY(calc(-100% - 1rem))
     animation: notification 3s ease forwards
     animation-delay: 1s
-    --card-radius: 1.5rem
+    --card-radius: 2rem
 
   .bannerNotification:hover
     animation: none
     transform: translateY(0%)
+
+  .bannerNotification::before
+    display: none
 
   @keyframes notification
     0%

@@ -35,12 +35,14 @@
       gap: 0.25rem
     }
 
-    h1 {
+    h1.loadingTitle {
       margin: 0
     }
 
-    a {
-      color: mediumpurple
+    a.loadingLink {
+      color: white;
+      text-decoration-color: deepskyblue;
+      text-decoration: underline;
     }
   </style>
   <body>
@@ -57,15 +59,15 @@
           </path>
         </svg>
 
-        <h1>loading...</h1>
+        <h1 class="loadingTitle">loading...</h1>
       </div>
 
       <div
-        style="opacity: 0.5"
+        style="opacity: 0.7"
         class="flexRow"
       >
-        problem? <a href="mailto:ash@asboy2035.com">contact me</a>
-        or <a href="https://www.google.com/chrome/">download Chrome</a>
+        problem? <a class="loadingLink" href="mailto:ash@asboy2035.com">contact me</a>
+        or <a class="loadingLink" href="https://www.google.com/chrome/">download Chrome</a>
       </div>
     </div>
 

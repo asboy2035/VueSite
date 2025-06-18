@@ -10,6 +10,6 @@
     margin: 1rem 0
     height: 0.2rem
     border-radius: 0.1rem
-    background: colors.$text-color
+    background: colors.$textColor
     opacity: 0.2
 </style>

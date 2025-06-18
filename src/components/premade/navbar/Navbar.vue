@@ -218,7 +218,7 @@
     justify-content: space-between
     align-items: center
     gap: 0.75rem
-    background: colors.$foreground-color
+    background: colors.$foregroundColor
     box-shadow: 0.5rem 0.5rem 3rem rgba(28, 28, 28, 0.2)
     padding: 0.5rem
     border-radius: 1.75rem
@@ -249,7 +249,7 @@
     padding: 0.5rem
 
     border-radius: 50%
-    background: colors.$accent-color
+    background: colors.$accentColor
     z-index: -1
     filter: blur(1rem)
     transition: opacity 0.4s ease

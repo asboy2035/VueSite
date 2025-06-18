@@ -125,7 +125,7 @@
     padding: 0.5rem 0.75rem
     align-items: center
 
-    background: colors.$foreground-color
+    background: colors.$foregroundColor
     border-radius: 1rem
 
   .app-card-v2 ::v-deep(svg)

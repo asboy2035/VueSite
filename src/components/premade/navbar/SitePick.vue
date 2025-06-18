@@ -25,7 +25,7 @@
     width: 2.5rem
     height: 2.5rem
     padding: 0.1rem
-    background: colors.$foreground-color
+    background: colors.$foregroundColor
     align-items: center
     justify-content: center
     border-radius: 1rem

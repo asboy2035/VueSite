@@ -4,16 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4684d0d3-24b4-4a0b-b787-2eb5ab8aa7d5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/asboy2035.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+    <list default="true" id="4684d0d3-24b4-4a0b-b787-2eb5ab8aa7d5" name="Changes" comment="improved transition">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/apps/UpdatedBadge.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/apps/UpdatedBadge.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/charCards/CustomizerPanel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charCards/CustomizerPanel.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/Card.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/Card.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/InteriorItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/InteriorItem.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/premade/FullscreenCover.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/premade/FullscreenCover.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/premade/TransitionElement.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/premade/TransitionElement.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/premade/navbar/Navbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/premade/navbar/Navbar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/premade/navbar/NavigationButton.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/premade/navbar/NavigationButton.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/premade/navbar/SitePick.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/premade/navbar/SitePick.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/utils/BannerNotification.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/utils/BannerNotification.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/utils/Divider.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/utils/Divider.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/button.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/button.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/colors.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/colors.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/global.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/global.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/utilities.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/utilities.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/AppsView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/AppsView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/GoodiesView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/GoodiesView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,13 +71,14 @@
     "nodejs_package_manager_path": "npm",
     "npm.build.executor": "Run",
     "npm.dev.executor": "Run",
+    "org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon": "",
     "org.rust.first.attach.projects": "true",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Language Defaults",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "ts.external.directory.path": "/Users/ash/IdeaProjects/asboy2035/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunManager" selected="npm.build">
     <configuration name="build" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -99,8 +110,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-64226f0f93ec-intellij.indexing.shared.core-IU-252.21735.32" />
-        <option value="bundled-js-predefined-d6986cc7102b-e0793c8bcbd6-JavaScript-IU-252.21735.32" />
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.26094.121" />
+        <option value="bundled-js-predefined-d6986cc7102b-b26f3e71634d-JavaScript-IU-251.26094.121" />
       </set>
     </attachedChunks>
   </component>
@@ -115,11 +126,25 @@
       <workItem from="1750063539868" duration="1181000" />
       <workItem from="1750077728407" duration="708000" />
       <workItem from="1750093075445" duration="206000" />
-      <workItem from="1750093297978" duration="805000" />
+      <workItem from="1750093297978" duration="3043000" />
+      <workItem from="1750238115835" duration="2485000" />
     </task>
+    <task id="LOCAL-00001" summary="improved transition">
+      <option name="closed" value="true" />
+      <created>1750094156925</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1750094156925</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="improved transition" />
+    <option name="LAST_COMMIT_MESSAGE" value="improved transition" />
   </component>
 </project>
