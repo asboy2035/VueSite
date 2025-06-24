@@ -8,7 +8,7 @@ const app = createApp(App)
 const head = createHead()
 
 router.afterEach((to) => {
-  const baseUrl = 'https://asboy2035.com' // 💡 Replace with your real domain
+  const baseUrl = 'https://asboy2035.com'
   const canonicalLink = document.querySelector("link[rel='canonical']")
 
   const fullUrl = baseUrl + to.fullPath
